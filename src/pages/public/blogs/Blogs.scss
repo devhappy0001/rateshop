@@ -1,0 +1,263 @@
+@import "../../../app/AppVariables.scss";
+.blog-banner{
+    background-color: $color-blue;
+    padding-top: 340px;
+    padding-bottom: 100px;
+    .banner-content{
+        .heading{
+            h1{
+                color: $color-white!important;
+                text-align: center;
+                @include media-query(wid60){
+                    margin-bottom: 0px!important;
+                }
+                span{
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+}
+.top-blog{
+    @include cm-padding;
+    background: #F6F6F6;
+    .top-blog-container {
+        width: auto;
+        margin-left: -15px;
+        margin-right: -15px; 
+        justify-content: center;  
+        .blog-col{
+            @include media-query(wid1279){
+                margin: 10px 0;
+            }
+            &:first-child{
+                @include media-query(wid60){
+                    margin-top: 0px;
+                }
+            }
+            &:last-child{
+                @include media-query(wid60){
+                    margin-bottom: 0px;
+                }
+            }
+        } 
+        .blog-inner{
+            background-color: $color-yellow;
+            margin: 0px 15px;
+            border-radius: 12px;
+            height: 100%;
+            a{
+                text-decoration: none;
+                figure{
+                    img{
+                        width: 100%;
+                        height: 196px;
+                        object-fit: cover;
+                        border-radius: 12px;
+                        border-top: 6px solid #09318b;
+                        @include media-query(xl){
+                            height: 155px;
+                        }
+                        @include media-query(wid60){
+                            height: 250px;
+                        }
+                    }
+                }
+                p{
+                    padding: 15px;
+                    @include font18($color-blue);
+                    font-family: $Avenir-Regular;
+                }
+            }
+            
+        }
+    }
+}
+.latest-blog{
+    background: #F6F6F6;
+    padding-bottom: 130px;
+    @include media-query(xxl){
+        padding-bottom: 60px;
+    }
+    @include media-query(xl){
+        padding-bottom: 40px;
+    }
+    .latest-blog-left{
+        padding-right: 15px;
+        @include media-query(wid959){
+            padding-right: 0px;
+        }
+        .heading{
+            margin-bottom: 20px;
+        }
+        .latest-blog-col{
+            display: flex;
+            .blog-content-box{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                @include media-query(sm){
+                    margin-top: 10px;
+                }
+                &.blog-left{
+                    margin-right: 20px;
+                    @include media-query(lg){
+                        margin-right: 10px;
+                    }
+                    @include media-query(xs){
+                        margin-right: 0px;
+                    }
+                    figure{
+                        margin-right: 50px;
+                        @include media-query(lg){
+                            margin-right: 30px;
+                        }
+                        @include media-query(sm){
+                            margin-right: 0px;
+                        }
+                    }
+                }
+                &.blog-right{
+                    margin-left: 20px;
+                    @include media-query(lg){
+                        margin-left: 10px;
+                    }
+                    @include media-query(xs){
+                        margin-left: 0px;
+                    }
+                    figure{
+                        margin-left: 50px;
+                        @include media-query(lg){
+                            margin-left: 30px;
+                        }
+                        @include media-query(sm){
+                            margin-left: 0px;
+                        }
+                    }
+                }
+                figure{
+                    height: 269px;
+                    @include media-query(xl){
+                        height: 230px;
+                    }
+                    @include media-query(lg){
+                        height: 200px;
+                    }
+                    @include media-query(xs){
+                        height: 250px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 12px;
+                        border-top: 10px solid #09318b;
+                    }
+                }
+                .blog-text-inner{
+                    background-color: $color-blue;
+                    border-radius: 12px;
+                    padding: 20px;
+                    position: relative;
+                    top: -18px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    // min-height: 370px;
+                    h3{
+                        @include font30;
+                        flex-grow: 1;
+                        margin-bottom: 15px;
+                        a{
+                            color: $color-yellow;
+                            text-decoration: none;
+                        }
+                    }
+                    p{
+                        color: $color-white;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                        flex-grow: 1;
+                    }
+                    button{
+                        margin-top: 20px;
+                        padding: 3px 25px;
+                        font-size: 18px!important;
+                        max-width: 164px;
+                        &:hover{
+                            background-color: $color-white;
+                            color: $color-blue;
+                        }
+                        @include media-query(xl){
+                            font-size: 16px!important;                        
+                        }
+                        @include media-query(sm){
+                            font-size: 14px!important;                        
+                        }
+                    }
+                }            
+            }
+        }
+        .view-all-blogs {
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+    .latest-blog-right{
+        padding-left: 15px;
+        .right-blog-box{
+            border: 1px solid $color-blue;
+            border-radius: 12px;
+            margin-top: 70px;
+            &:last-child{
+                @include media-query(sm){
+                    margin-top: 20px;
+                }
+            }
+            @include media-query(xl){
+                margin-top: 50px;
+            }
+            h4{
+                @include font(23px, 20px, $color-blue, $Avenir-Bold );
+                text-align: center;
+                padding: 25px 12px;
+                border-radius: 12px;
+                border: 1px solid $color-blue;
+                border-top: none;
+                background-color: $color-white;
+                @include media-query(xl){
+                    font-size: 20px;
+                    padding: 20px 10px;
+                }
+                @include media-query(lg){
+                    font-size: 18px;
+                    padding: 15px 10px;
+
+                }
+            }
+            ul{
+                list-style: none;
+                padding: 20px 0;
+                li{
+                    a{
+                        display: block;
+                        padding: 10px 30px;
+                        @include font18($color-black);
+                        font-family: $Avenir-Regular;
+                        text-decoration: none;
+                        transition: all 0.5s ease;
+                        @include media-query(lg){
+                            padding: 10px 20px;
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

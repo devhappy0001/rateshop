@@ -1,0 +1,23 @@
+.modal-dialog{
+    .MuiDialog-paper {
+        margin: 15px !important;
+        width: calc(100% - 30px);
+    }
+}
+.thankyou-modal{
+    .MuiDialog-paper {
+        background: transparent;
+    }
+    .dialog-body {
+        border: 5px solid #09318b;
+        border-radius: 20px;
+        background-color: #fff;
+        height: 100%;
+        .thankyou-modal{
+            img{
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

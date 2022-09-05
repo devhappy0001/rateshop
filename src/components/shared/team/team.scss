@@ -1,0 +1,82 @@
+@import "../../../app/AppVariables.scss";
+
+.our-team {
+  @include cm-padding;
+  background-color: $color-dark;
+  .heading {
+    text-align: center;
+    margin-bottom: 100px;
+    @include media-query(xxl) {
+      margin-bottom: 80px;
+    }
+    @include media-query(lg) {
+      margin-bottom: 40px;
+    }
+    h3 {
+      color: $color-white;
+      span {
+        color: $color-black;
+        background-color: $color-yellow;
+      }
+    }
+  }
+  .owl-item {
+    figure {
+      position: relative;
+      padding-bottom: 103%;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        @include cover-img;
+      }
+    }
+    .info-details {
+      width: calc(100% - 80px);
+      margin: -70px auto 0;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 9;
+      position: relative;
+      text-align: center;
+      min-height: 80px;
+      @include media-query(md){
+        padding: 20px 10px 10px;
+        width: calc(100% - 40px);
+      }
+      @include media-query(sm){
+        width: calc(100% - 70px);
+      }
+      h4 {
+        @include font30;
+        margin-bottom: 5px;
+        @include media-query(md){
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .owl-nav {
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -40px;
+      background-color: transparent !important;
+      span {
+        @include font(80px, 80px, $color-white, inherit);
+      }
+      &.owl-next {
+        left: unset;
+        right: -40px;
+      }
+    }
+  }
+  .mt-80 {
+    margin-top: 80px;
+    @include media-query(sm){
+      margin-top: 50px;
+    }
+  }
+}

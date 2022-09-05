@@ -1,0 +1,174 @@
+@import "../../../../app/AppVariables.scss";
+
+@mixin font26 {
+  @include font(26px, 37px, $color-white, $Avenir-Regular);
+  @include media-query(xxl) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @include media-query(xl) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @include media-query(lg) {
+    font-size: 16px;
+    line-height: 22px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  @include media-query(md) {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+
+footer {
+  background-color: $color-blue;
+  padding-top: 150px;
+  overflow: hidden;
+  // @include media-query(xxl) {
+  //   padding-top: 180px;
+  // }
+  @include media-query(lg) {
+    padding-top: 120px;
+  }
+  @include media-query(md) {
+    padding-top: 130px;
+  }
+  @include media-query(sm) {
+    padding-top: 100px;
+  }
+  .MuiContainer-root {
+    position: relative;
+    .footer-shapes {
+      img {
+        position: absolute;
+        &.shape-1 {
+          left: 10%;
+          bottom: -19%;
+          @include media-query(xxl) {
+            width: 28%;
+          }
+        }
+        &.shape-2 {
+          right: 0;
+          bottom: -35%;
+          @include media-query(xxl) {
+            width: 22%;
+          }
+        }
+      }
+    }
+  }
+  .links-title {
+    h4 {
+      margin-bottom: 25px;
+      @include font30;
+      color: $color-yellow;
+    }
+  }
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    a {
+      @include font26;
+      text-decoration: none;
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+    &.contact-information {
+      li + li {
+        margin-top: 37px;
+        @include media-query(xxl) {
+          margin-top: 32px;
+        }
+        @include media-query(xl) {
+          margin-top: 30px;
+        }
+        @include media-query(lg) {
+          margin-top: 15px;
+        }
+        @include media-query(md) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .social-icons {
+    margin: 30px 0;
+    ul {
+      list-style: none;
+      li {
+        a {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          padding: 5px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s ease-in-out;
+          @include media-query(xl) {
+            width: 45px;
+            height: 45px;
+          }
+          @include media-query(lg) {
+            width: 40px;
+            height: 40px;
+          }
+          @include media-query(md) {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 10px;
+          }
+          svg {
+            fill: $color-yellow;
+            width: 40px;
+            height: 40px;
+            transition: 0.3s ease-in-out;
+            @include media-query(xl) {
+              width: 30px;
+              height: 30px;
+            }
+            @include media-query(lg) {
+              width: 20px;
+              height: 20px;
+            }
+            @include media-query(md) {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          &:hover {
+            background-color: #fff;
+            svg {
+              fill: $color-blue;
+            }
+          }
+        }
+        &:not(:last-of-type) {
+          margin-right: 15px;
+          @include media-query(lg){
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .copright {
+    margin-top: 30px;
+    @include media-query(lg) {
+      margin-top: 0px;
+    }
+    p {
+      text-align: center;
+      @include font26;
+      padding: 15px 0;
+    }
+  }
+}

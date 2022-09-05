@@ -1,0 +1,60 @@
+@import "../../../app/AppVariables.scss";
+.compare-wrap{
+    border: 1px solid $color-blue;
+    height: 100%;
+    padding: 40px 0;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    .compare-heading{
+        h3{
+            @include font30;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .compare-img{
+        background: #fff;
+        padding: 15px;
+        min-height: 79px;
+        display: flex;
+        align-items: center;
+        img{
+            // height: ;
+            width: auto;
+            margin: 0 auto;
+            max-width: 150px
+        }
+    }
+    .compare-price{
+        text-align: center;
+        h3{ 
+            text-align: center;
+            padding-top: 70px;
+            margin-bottom: 5px;
+            @include font40;
+            @include media-query(xl){
+                padding-top: 50px;
+            }
+            @include media-query(sm){
+                padding-top: 40px;
+            }
+        }
+        span{
+            display: block;
+            text-align: center;
+            @include font18($color-black);
+            font-family: $Avenir-Regular;
+        }
+        button{
+            margin-top: 40px;
+            @include media-query(xl){
+                margin-top: 30px;
+            }
+            &:hover{
+                span{
+                    color: $color-white!important;
+                }
+            }
+        }
+    }
+}

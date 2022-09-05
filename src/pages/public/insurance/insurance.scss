@@ -1,0 +1,33 @@
+@import "../../../app/AppVariables.scss";
+.insurance-banner{
+    .banner-content{
+        .heading{
+            h1{
+                text-align: left!important;
+            }
+        }
+        ul{
+            @include media-query(sm){
+                margin-top: 10px;
+            }
+        }
+    }
+    .com-banner-img{
+        @include media-query(lg){
+            padding-left: 20px;
+        }
+        @include media-query(wid60){
+            padding-left: 0px;
+        }
+        img{
+            max-width: 425px;
+        }
+    }
+}
+.insurance-compare{
+
+    .inner-com-select{
+        margin-top: 0px!important;
+        justify-content: center!important;
+    }
+}

@@ -1,0 +1,226 @@
+@import "../../../../app/AppVariables.scss";
+
+// menu-item css start here
+.desktop-main{
+  margin: 0px;
+  width: 100%;
+  box-shadow: none!important;
+  margin-right: 0px!important;
+  .desktop-menu{
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    box-shadow: none;
+    list-style: none;
+    padding: 20px 0 0px 0;
+    margin: 10px 0 0 0;
+    border-top: 2px solid $color-blue;
+    justify-content: space-between;
+    @include media-query(lg){
+      justify-content: center;
+    }
+    @include media-query(md){
+      display: none!important;
+    }
+  }
+}
+.main-header{
+  li{
+    background-color: transparent;
+    padding: 0px 10px 10px ;
+    &:hover{
+      background: transparent;
+      @include media-query(md){
+        background-color: $color-blue;
+      }
+      a{
+        @include media-query(md){
+          color: $color-white;
+        }
+      }
+    }
+    a{
+      @include font(20px, 30px, $color-black, $Avenir-Bold);
+      text-decoration: none;
+      position: relative;
+      // padding:0px 10px;
+      @include media-query(xxl) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include media-query(xl) {
+        font-size: 15px;
+        line-height: 24px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0%; 
+        top: calc(100% + 2px);
+        height: 2px;
+        background-color: $color-black;
+        width: 0px;
+        transition: 0.3s ease-in-out;
+        @include media-query(md){
+          display: none;
+        }
+      }
+      &:hover {
+        &:after {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+    // &:not(:last-of-type) {
+    //   margin-right: 15px;
+    // }
+  }
+  li:first-child{
+    padding-left: 0px;
+  }
+  li:last-child{
+    padding-right: 0px;
+  }
+  .mobile-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #0000006e;
+    left: 0;
+    top: 65px;
+    bottom: 0;
+    right: 0;
+    display: none;
+    pointer-events: none;
+    @include media-query(xs){
+      top: 59px;
+    }
+    &.show{
+      display: block;
+    }
+  }
+  .mobile-toggle-btn{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent!important;
+    min-width: auto;
+    display: flex!important;
+    max-width: 30px;
+    padding: 0px!important;
+    &.show{
+      .toggle-close{
+        display: block!important;
+      }
+      .mobile-toggle{
+        display: none;
+      }
+    }
+  }
+}
+.mobile-menu{
+  display: none;
+  @include media-query(md){
+    display: block;
+  }
+  .mobile-menu-list{
+    position: fixed!important;
+    left: -250px!important;
+    width: 250px;
+    transform: unset!important;
+    top: 65px!important;
+    box-shadow: none!important;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    background: #fff;
+    will-change: unset!important;
+    display: block!important;
+    overflow: auto;
+    padding-bottom: 100px;
+    @include media-query(xs){
+      top: 59px!important;
+    }
+    &.show{  
+      left: 0px!important;
+      visibility: visible;
+      opacity: 1;
+    }
+    .MuiPaper-root {
+      box-shadow: none;
+      transform: unset!important;
+      transition: unset!important;
+      transform-origin: unset!important;
+      border-radius: 0px!important;
+      background-color: transparent!important;
+    }
+    li{
+      padding: 15px;
+      padding: 10px 25px;
+      border-top: 1px solid #f3f3f3;
+      &:first-child{
+        border: none;
+      }
+      button{
+        display: none;
+        margin-top: 10px!important;
+        @include media-query(xs){
+          display: block!important;
+        }
+      }
+    }
+    
+  }
+  
+}
+
+// menu-item css ends here
+
+// ul.navbar-nav {
+//   list-style: none;
+//   padding: 20px 0 10px 0;
+//   margin: 10px 0 0 0;
+//   border-top: 2px solid $color-blue;
+//   justify-content: space-between;
+//   @include media-query(xxl) {
+//     padding-bottom: 5px;
+//   }
+//   @include media-query(md){
+//     display: none;
+//   }
+//   li {
+//     a {
+//       @include font(24px, 30px, $color-black, $Avenir-Bold);
+//       text-decoration: none;
+//       position: relative;
+//       @include media-query(xxl) {
+//         font-size: 16px;
+//         line-height: 20px;
+//       }
+//       @include media-query(xl) {
+//         font-size: 15px;
+//         line-height: 24px;
+//       }
+//       &::after {
+//         content: "";
+//         position: absolute;
+//         left: 0%; 
+//         top: calc(100% + 2px);
+//         height: 2px;
+//         background-color: $color-black;
+//         width: 0px;
+//         transition: 0.3s ease-in-out;
+//       }
+//       &:hover {
+//         &:after {
+//           width: calc(100% - 20px);
+//         }
+//       }
+//     }
+//     &:not(:last-of-type) {
+//       margin-right: 15px;
+//     }
+//   }
+// }

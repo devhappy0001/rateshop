@@ -1,0 +1,14 @@
+@import "../../../app/AppVariables.scss";
+
+.banking-banner{
+    .com-banner-img{
+        img{
+            max-width: 462px;
+        }
+    }
+}
+.banking-compare-slider{
+    &:after{
+        content: none!important;
+    }
+}

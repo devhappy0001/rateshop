@@ -1,0 +1,238 @@
+$Avenir-Bold: "MyWebAvenirNext-demiBold";
+$Avenir-Regular: "Avenir-Next-LT-Pro-Regular";
+$color-black: #000;
+$color-blue: #09318b;
+$color-grey: #f6f6f6;
+$color-yellow: #fdcf21;
+$color-dark: #262626;
+$color-white: #ffffff;
+$color-green:#008000;
+$color-darkgrey:#9e9e9e;
+// **************************container media**************************
+@mixin container-size($size) {
+  @if $size == xs {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media (min-width: 1700px) {
+      @content;
+    }
+  }
+}
+// **************************media css**************************
+@mixin media-query($size) {
+  @if $size == xxl {
+    @media (max-width: 1700px) {
+      @content;
+    }
+  }@else if $size == xl {
+    @media (max-width: 1399px) {
+      @content;
+    }
+  } @else if $size == wid1279 {
+    @media (max-width: 1279px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (max-width: 991px) {
+      @content;
+    }
+    
+  } @else if $size == wid959 {
+    @media (max-width: 959px) {
+      @content;
+    }
+  }@else if $size == sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+    @else if $size == wid60 {
+      @media (max-width: 599px) {
+        @content;
+    }
+  } @else if $size == xs {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+  @else if $size == wid480 {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }@else if $size == wid40 {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+}
+// **************************font**************************
+@mixin fontRegular($font-size, $font-height, $font-color) {
+  font-size: $font-size;
+  line-height: $font-height;
+  color: $font-color;
+  font-family: $Avenir-Regular;
+}
+@mixin fontBold($font-size, $font-height, $font-color) {
+  font-size: $font-size;
+  line-height: $font-height;
+  color: $font-color;
+  font-family: $Avenir-Bold;
+}
+@mixin font($font-size, $font-height, $font-color, $font-family) {
+  font-size: $font-size;
+  line-height: $font-height;
+  color: $font-color;
+  font-family: $font-family;
+}
+// ****font 14****
+@mixin font14($font-col) {
+  @include font(14px, 18px, $font-col, $Avenir-Regular); 
+  @include media-query(sm){
+    font-size: 13px!important;
+    line-height: 18px!important;
+  }
+}
+
+// ****font 16****
+@mixin font16($font-col) {
+  @include font(16px, 22px, $font-col, $Avenir-Regular); 
+  @include media-query(xl){
+    font-size: 15px;
+    line-height: 20px;
+  }
+  @include media-query(sm){
+    font-size: 14px!important;
+    line-height: 20px!important;
+  }
+}
+// ****font 18****
+@mixin font18($font-col) {
+  @include font(18px, 25px, $font-col, $Avenir-Bold); 
+  @include media-query(xl){
+    font-size: 16px!important;
+    line-height: 20px!important;
+  }
+  @include media-query(sm){
+    font-size: 15px!important;
+    line-height: 20px!important;
+  }
+}
+// ****font 30****
+@mixin font30 {
+  @include font(30px, 37px, $color-blue, $Avenir-Bold);
+  @include media-query(xxl) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  @include media-query(xl) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  @include media-query(sm) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@mixin font40 {
+  @include font(40px, 45px, $color-blue, $Avenir-Bold);
+  @include media-query(xxl) {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  @include media-query(xl) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  @include media-query(sm) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+// ****text font***
+@mixin text-font {
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $Avenir-Regular;
+  color: $color-black;
+  @include media-query(xxl) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @include media-query(xl) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  @include media-query(lg) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @include media-query(xs) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+// **************************common padding**************************
+@mixin cm-padding {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  @include media-query(xxl) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+   @include media-query(xl) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  // @include media-query(xl) {
+  //   padding-top: 100px;
+  //   padding-bottom: 100px;
+  // }
+  // @include media-query(lg) {
+  //   padding-top: 60px;
+  //   padding-bottom: 60px;
+  // }
+  // @include media-query(md) {
+  //   padding-top: 80px;
+  //   padding-bottom: 80px;
+  // }
+  // @include media-query(sm) {
+  //   padding-top: 70px;
+  //   padding-bottom: 70px;
+  // }
+}
+// **************************cover img**************************
+@mixin cover-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+

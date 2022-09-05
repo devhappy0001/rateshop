@@ -1,0 +1,218 @@
+@import "../../../app/AppVariables.scss";
+.testimonial {
+  @include cm-padding;
+  padding-top: 220px;
+  @include media-query(xxl) {
+    padding-top: 130px;
+  }
+  @include media-query(sm) {
+    padding-top: 90px;
+  }
+  &.testimonial-head{
+    padding-top: 130px;
+    @include media-query(xxl){
+      padding-top: 40px;
+    }
+    .testimonail-title{
+      margin-bottom: 160px;
+      @include media-query(xl){
+        margin-bottom: 130px;
+      }
+      @include media-query(sm){
+        margin-bottom: 90px;
+      }
+      text-align: center;
+      h3{
+        margin-bottom: 20px;
+        @include media-query(md){
+          padding:0px;
+        }
+      }
+      p{
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .heading {
+    h3 {
+      color: $color-blue;
+      @include media-query(md){
+        padding:40px 0 ;
+      }
+      @include media-query(sm){
+        text-align: center;
+        padding:20px 0 ;
+      }
+    }
+  }
+  .testimonial-outer {
+    background-color: $color-yellow;
+    padding: 80px 60px;
+    position: relative;
+    @include media-query(lg){
+      padding: 80px 30px;
+    }
+    @include media-query(sm){
+      padding: 80px 10px;
+    }
+    > .quote-icon {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background-color: $color-blue;
+      padding: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 40px;
+      top: -130px;
+      @include media-query(xxl) {
+        width: 220px;
+        height: 220px;
+        top: -110px;
+      }
+      @include media-query(xl) {
+        width: 160px;
+        height: 160px;
+        top: -90px;
+      }
+      @include media-query(sm) {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      img {
+        height: 110px;
+        @include media-query(xxl) {
+          height: 70px;
+        }
+        @include media-query(xl) {
+          height: 50px;
+        }
+        @include media-query(sm) {
+          height: 30px;
+        }
+      }
+    }
+    .testimonial-wrap {
+      position: relative;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-top: 25px;
+      .quote-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $color-white;
+        padding: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 25px;
+        top: -25px;
+        border: 4px solid $color-yellow;
+        @include media-query(sm){
+          width: 60px;
+          height: 60px;
+        }
+        img {
+          height: 25px;
+          object-fit: scale-down;
+        }
+        svg{
+          height: 35px;
+          width: 35px;
+          @include media-query(sm){
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+      .rating {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: $color-yellow;
+        }
+      }
+      .testimonia-text {
+        a {
+          text-decoration: none;
+          display: block;
+          margin: 10px 0 30px auto;
+          text-align: right;
+          @include font(18px, 27px, $color-blue, $Avenir-Bold);
+          @include media-query(lg){
+            font-size: 15px;
+          }
+          @include media-query(sm){
+            font-size: 14px;
+          }
+        }
+      }
+      .info-details {
+        display: flex;
+        align-items: center;
+        .info-img{
+          margin-right: 15px;
+          img{
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            @include media-query(sm){
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+        h4 {
+          margin-bottom: 5px;
+          @include font30;
+          @include media-query(sm){
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    .MuiGrid-container{
+        overflow: hidden;
+        .MuiGrid-item{
+          @include media-query(sm){
+            width: 100%;
+          }       
+        }
+    }
+  }
+  .test-get-started {
+      margin-top: 50px;
+      text-align: center;
+  }
+  .owl-nav {
+    text-align: left;
+    @include media-query(sm){
+      text-align: center;
+    }
+    button {
+      width: 50px;
+      height: 50px;
+      display: inline-block !important;
+      border-radius: 50% !important;
+      background-color: $color-blue !important;
+      margin: 10px 10px 0 0 !important;
+      span {
+        @include font(40px, 15px, $color-white, inherit);
+      }
+    }
+  }
+}

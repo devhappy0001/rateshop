@@ -1,0 +1,43 @@
+@import "../../../app/AppVariables.scss";
+
+// search select style start here
+.com-serach-select{
+    width: 100%!important;
+    height: 45px;
+    border: 1px solid rgba(38, 50, 56, 0.1) !important;
+    color: $color-black;
+    font-family: "Avenir-Next-LT-Pro-Regular";
+    // padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    @include media-query(lg){
+        height: 40px;
+    }
+    fieldset{
+        border: none;
+        height: 45px;
+    }
+    .search-sel-text{
+        @include media-query(lg){
+            height: 40px;
+        }
+        .MuiInputBase-root{
+            padding: 0px;
+            height: 45px;
+        }
+        input{
+            @include font14($color-black);
+        }
+        button{
+            background-color: transparent!important;
+            color: $color-black!important;
+        }
+    }
+}
+.MuiAutoComplete-popper{
+   span{
+    @include font14($color-black);
+   }
+}
+// search select style ends here

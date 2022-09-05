@@ -1,0 +1,499 @@
+ @import "../../app/AppVariables.scss";
+
+/* Qucik form css start here */
+.quick-com-parent{
+    @include cm-padding;
+    background-color: $color-blue;
+    .quick-container{
+        @include media-query(md){
+            max-width: 100%!important;
+            padding-left: 50px!important;
+            padding-right: 50px!important;
+        }
+        @include media-query(sm){
+            padding-left: 15px!important;
+            padding-right: 15px!important;
+        }
+        .quick-inner{
+            border: 5px solid $color-yellow;
+            border-radius: 30px;
+            padding: 30px;
+            background:$color-white ;
+            max-width: 1000px;
+            margin: 0 auto;
+            @include media-query(xs){
+                padding: 30px 10px;
+            }
+            .steps-detail{
+                padding-top: 0px;
+                @include media-query(sm){
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-bottom: 10px;
+                }
+                @include media-query(xs){
+                    justify-content: center;
+                }
+            }
+            .quick-steps{
+                @include font14($color-darkgrey); 
+                text-align: center;
+                padding: 0px;
+            }
+            .step-com-main{
+                .heading{
+                    margin-bottom: 20px;
+                    h4{
+                        text-align: center;
+                        // color: $color-blue;
+                        margin-bottom: 30px;
+                        @include font30;
+                        span{
+                            background: unset;
+                            text-decoration: underline;
+                            color: $color-blue;
+                            padding: 0px;
+                        }
+                        @include media-query(md){
+                            margin-bottom: 20px;
+                        }
+                    }
+                    p{
+                        // @include fontRegular(16px,24px,$color-black);
+                    @include font16($color-black); 
+
+                    }
+                }            
+                .step-radio-box{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    .step-radio-outer {
+                        width: calc(25% - 30px);
+                        margin: 0px 15px;
+                        position: relative;
+                        @include media-query(xl){
+                            width: calc(25% - 20px);
+                            margin: 0px 10px;
+                        }
+                        @include media-query(md){
+                            width: calc(33.3% - 20px);
+                            margin: 20px 10px 0px;
+                        }
+                        @include media-query(sm){
+                            width: calc(50% - 10px);
+                            margin: 10px 5px 0px;
+
+                        }
+                        @include media-query(wid480){
+                            width: calc(100% - 20px);
+                        }
+                        &:hover{
+                            span{
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                        input{
+                            position: absolute;
+                            opacity: 0;
+                            visibility: hidden;
+                            width: 0;
+                            height: 0;
+                            &:checked ~ label{
+                                background-color: rgba(253, 207, 33, 0.1);
+                                border-color: $color-yellow;
+                            }
+                        }
+                        label{
+                            position: relative;
+                            border: 1px solid rgba(38,50,56,.1);
+                            box-shadow: 20px 5px 50px rgba(9, 49, 139, 0.1);
+                            border-radius: 15px;
+                            display: flex;
+                            align-items: center;
+                            background-color: #fff;
+                            overflow: visible;
+                            // cursor: pointer;
+                            padding-left: 1.25rem;
+                            padding-right: 1.25rem;
+                            transition: .2s ease-out;
+                            flex-direction: column;
+                            max-height: unset;
+                            height: auto;
+                            justify-content: space-around;
+                            padding-top: 1.5rem;
+                            padding-bottom: 1.5rem;
+                            min-height: 170px;
+                            @include media-query(xl){
+                                padding: 15px;
+                                
+                            }
+                            @include media-query(md){
+                                min-height: 150px;
+                            }
+                            &:hover{
+                                background-color: rgba(253, 207, 33, 0.1);
+                                border-color: $color-yellow;
+                            }
+                            h4{
+                                @include font16($color-blue); 
+                                font-family: $Avenir-Bold;
+                                margin-top: 10px;
+                                text-align: center;
+                            }
+                            img{
+                                height: 70px;
+                            width: 100%;
+                            object-fit: scale-down;
+                            }
+                            & + span{  
+                                text-align: center!important;
+                                display: block;
+                                @include font14($color-black); 
+                                margin-top: 10px;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.5s ease;
+                                @include media-query(lg){
+                                    display: none
+                                }
+                            }
+                        }
+                    }
+
+                }
+                p{
+                    @include font16($color-darkgrey); 
+                    text-align: center;
+                }
+                .quick-com-input{
+                    position: relative;
+                    margin-bottom: 20px;
+                    .MuiFormControl-root{
+                        margin: 0px!important;
+                    }
+                    input{
+                        height: 45px;
+                        border: 1px solid rgba(38, 50, 56, 0.1)!important;
+                        @include font16($color-black); 
+                        padding: 10px;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        transition: all 0.3s ease;
+                        @include media-query(lg){
+                            height: 40px;
+                        }
+                        &:hover{
+                            border-color:rgba(38, 50, 56, 0.1)!important;
+                        }
+                        &:focus{
+                            border-color:$color-blue!important ;
+                        }
+                        &::placeholder{
+                            color: $color-darkgrey;
+                            opacity: 1;
+                        }
+                    }
+                    fieldset{
+                        height: 50px;
+                        // border: none;
+                    }
+                    & > span{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: $color-blue;
+                        height: 45px;
+                        width: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include font16($color-white); 
+                        font-weight: 600;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        @include media-query(lg){
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
+                &.steps1, &.steps2, &.steps6, &.steps7{
+                    .heading{
+                        @include media-query(md){
+                            margin-bottom: 0px;
+                        }
+                        h4{
+                            @include media-query(md){
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                }
+                &.steps3{
+                    min-height: 230px;
+                    .quick-com-input{
+                        max-width: 475px;
+                        margin: 0 auto 20px;
+                    }
+                    input{
+                        padding-left: 60px;
+                    }
+                }
+                &.steps4, &.steps5{
+                    .down-payment{
+                        display: flex;
+                        @include media-query(xs){
+                            flex-wrap: wrap;
+                            text-align: center;
+                        }
+                        @include fontBold(16px,24px,$color-blue);
+                        max-width: 670px;
+                        margin: 0 auto 20px;
+                        align-items: center;
+                        .quick-com-input{
+                            margin-left: 15px;
+                            margin-bottom: 0px;
+                            @include media-query(xs){
+                                width: 100%;
+                                margin-left: 0px;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                    .step-radio-box{
+                        display: unset;
+                        .step-radio-outer{
+                            padding: 5px 0px;
+                            max-width: 280px;
+                            margin: 0 auto;
+                            width: 100%;
+                            label{
+                                min-height: unset;
+                                padding: 12px 12px 10px;
+                                h4{
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                &.steps4{
+                    input{
+                        padding-left: 60px;
+                    }
+                    .mortgage-balance{
+                        max-width: 700px;
+                        margin: 0 auto;
+                        
+                        .mortgage-input{
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            @include font16($color-blue); 
+                            font-weight: 800;
+                            margin-bottom: 20px;
+                            label{
+                                width: 150px;
+                            }
+                            .quick-com-input{
+                                width: calc(100% - 150px);
+                                margin: 0px;
+                            }
+                        }
+                    }
+                }
+                &.steps8, &.steps9{
+                    .heading{
+                        h4{
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            margin-bottom: 30px;
+                            @include media-query(md){
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+                &.steps9{
+                    input, fieldset{
+                        max-width: 700px;
+                        margin: 0 auto;
+                    }
+                    .privacy-agreement{
+                        h5{
+                            @include fontRegular(24px, 25px, $color-blue);
+                            display: flex;
+                            align-items: center;
+                            margin-top: 20px;
+                            @include media-query(xxl){
+                                font-size: 22px;
+                                line-height: 22px;
+                            }
+                            @include media-query(xl){
+                                font-size: 18px;
+                                line-height: 20px;
+                            }
+                            svg{
+                                width: 15px;
+                                height: 15px;
+                                margin-right: 5px;
+                            }
+                        }
+                        .privacy-text{
+                            margin-top: 10px;
+                            height: 130px;
+                            overflow: auto;
+                            margin-bottom: 20px;
+                            p{
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .com-check{
+                        margin-bottom: 10px;
+                        & > span{
+                            padding: 0px 0px 0px 10px;
+                            &:last-child{
+                                color: $color-darkgrey;
+                            }
+                        }
+                        span{
+                            @include font16($color-blue);
+                            font-family: $Avenir-Regular;
+                        } 
+
+                    }
+                }
+                .checkout-offer-form{
+                    max-width: 700px;
+                    margin: 0 auto;
+                    input{
+                        margin-bottom: 10px;
+                    }
+                }
+                .mortgage-lender{
+                    max-width: 700px;
+                    margin: 0 auto;
+                    p{
+                        margin-top: 20px;
+                    }
+                }
+                .addtional-fund{
+                    min-height: 80px;
+                }
+            }
+            .quick-step-count{
+                @include media-query(xs){
+                    padding: 4px;
+                    flex: unset;
+                }
+                svg{
+                    @include media-query(xs){
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .MuiStepConnector-line{
+                    @include media-query(xs){
+                        display: none;
+                    }
+                }
+            }
+        }
+        .step-bottom{
+            margin-top: 80px;
+            align-items: center;
+            @include media-query(xxl){
+                margin-top: 60px;
+            }
+            @include media-query(md){
+                flex-wrap: nowrap;
+            }
+            @include media-query(sm){
+                margin-top: 40px;
+            }
+            &.mobile-chat{
+                margin-top: 0px;
+                margin-bottom: 30px;
+                display: none;
+                @include media-query(sm){
+                    display: block;
+                }
+                .chat-massage{
+                    img{
+                        max-width: 50px;
+                        @include media-query(xs){
+                            max-width: 40px;
+                        }
+                    }
+                }
+                .chat-messgae-text{
+                    max-width: 100%!important;
+                }
+            }
+            .desktop-chat{
+                @include media-query(sm){
+                    display: none;
+                }
+            }
+            .prev-next-btn{
+                display: flex;
+                justify-content: flex-end!important;
+                align-items: flex-end;
+                @include media-query(sm){
+                    justify-content: space-between !important;
+                    width: 100%;
+                }
+                button{
+                    &:last-child{
+                        margin-left: 30px;
+                        @include media-query(md){
+                            margin-left: 20px;
+                        }
+                        @include media-query(sm){
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+            .chat-massage{
+                display: flex;
+                align-items: center;
+                img {
+                    max-width: 60px;
+                }
+                .chat-messgae-text{
+                    @include font16($color-blue);
+                    max-width: 330px;
+                    background: #e1e6f1;
+                    padding: 20px;
+                    border-radius: 20px;
+                    margin-left: 20px;
+                    position: relative;
+                    z-index: 0;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        border: 7px solid #e1e6f1;
+                        left: -7px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                        z-index: -1;
+                    }
+                    @include media-query(wid40){
+                        padding: 10px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Qucik form css ends here */
+

@@ -1,0 +1,874 @@
+@import "./AppVariables.scss";
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+// reset css end here
+.MuiGrid-item {
+  padding: 0 15px;
+}
+// **************************flex css**************************
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+
+// **************************contaner width**************************
+@mixin container-width1 {
+  max-width: 100% !important;
+  @include container-size(xs) {
+    max-width: 540px !important;
+  }
+  @include container-size(sm) {
+    max-width: 720px !important;
+  }
+  @include container-size(md) {
+    max-width: 960px !important;
+  }
+  @include container-size(lg) {
+    max-width: 1050px !important;
+  }
+  // @include container-size(desk12to14) {
+  //   max-width: 1050px !important;
+  // }
+  @include container-size(xl) {
+    max-width: 1220px !important;
+  }
+  @include container-size(xxl) {
+    max-width: 1440px !important;
+  }
+}
+@mixin container-width {
+  @include container-width1;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.MuiContainer-maxWidthLg {
+  @include container-width;
+}
+// **************************heading fonts**************************
+.heading {
+  h1 {
+    font-size: 53px;
+    line-height: 70px;
+    font-family: $Avenir-Bold;
+    color: $color-black;
+    @include media-query(xxl) {
+      font-size: 45px;
+      line-height: 55px;
+    }
+    @include media-query(xl) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    @include media-query(md) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+    @include media-query(sm) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+}
+.heading {
+  h2,
+  h3 {
+    font-size: 36px;
+    line-height: 45px;
+    font-family: $Avenir-Bold;
+    color: $color-black;
+    @include media-query(xxl) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    // @include media-query(xl) {
+    //   font-size: 30px;
+    //   line-height: 40px;
+    // }
+    @include media-query(lg) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    @include media-query(sm) {
+      font-size: 22px;
+      line-height: 31px;
+    }
+    span {
+      color:#fff;
+      background-color: $color-blue;
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 15px 0 0 10px;
+    }
+  }
+}
+// .heading{
+//   h4{
+//     font-size: 30px;
+//     line-height: 40px;
+//     font-family: $Avenir-Bold;
+//     color: $color-black;
+//   }
+// }
+// **************************text font**************************
+p {
+  @include text-font;
+}
+
+// ***********************buttons**************************
+button {
+  &[class*="MuiButton-contained"] {
+    padding: 10px 40px;
+    font-size: 22px!important;
+    line-height: 40px!important;
+    border-radius: 30px;
+    text-transform: capitalize;
+    @include media-query(xxl) {
+      font-size: 20px!important;
+      line-height: 35px!important;
+      padding: 8px 30px;
+    }
+    @include media-query(xl) {
+      font-size: 18px!important;
+      line-height: 30px!important;
+      padding: 6px 25px;
+    }
+    @include media-query(sm) {
+      font-size: 16px!important;
+      line-height: 30px!important;
+      // padding: 10px 30px;
+    }
+  }
+  &:not(.MuiButton-containedPrimary):not(.MuiButton-containedSecondary) {
+    background-color: $color-green;
+    color: $color-white;
+    &:hover {
+      background-color: $color-blue;
+      color: #fff;
+    }
+  }
+  &.MuiButton-containedPrimary {
+    background-color: $color-yellow;
+    color: $color-blue;
+    &:hover {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+  }
+  &.MuiButton-containedSecondary {
+    background-color: $color-blue;
+    color: #fff;
+    &:hover {
+      background-color: $color-yellow;
+      color: $color-blue;
+    }
+  }
+}
+
+
+
+// If TO is used, the final number is excluded; if THROUGH is used, it's included.
+$spacing: 10;
+@for $i from 1 through $spacing {
+  .pt-#{$i*10} {
+    padding-top: ($i * 10px);
+  }
+}
+@for $i from 1 through $spacing {
+  .pb-#{$i*10} {
+    padding-bottom: ($i * 10px);
+  }
+} 
+@for $i from 1 to $spacing 
+{
+  .mt-#{$i*10} 
+  {
+    margin-top: ($i * 10px);
+  }
+} 
+
+// justify center
+.justify-center{
+  justify-content: center;
+}
+
+// common hero banner with background start here
+.com-bg-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 280px;
+  padding-bottom: 60px;
+  @include media-query(xl){
+    padding-top: 250px;
+  }
+  @include media-query(lg){
+    padding-top: 280px;
+  }
+  @include media-query(md){
+      padding-top: 120px;
+  }
+  @include media-query(sm){
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .banner-content{
+      h1{
+          color:$color-white;
+          text-align: center;
+          text-transform: uppercase;
+          br{
+              @include media-query(sm){
+                  display: none;
+              }
+          }
+      }
+      ul{
+          max-width: 600px;
+          margin: 0 auto;
+          display: flex;
+          list-style: none;
+          padding: 0px;
+          margin-top: 30px;
+          flex-wrap: wrap;
+          justify-content: center;
+          @include media-query(sm){
+            margin-top: 20px;
+          }
+          li{
+              background: #FDCF21;
+              border-radius: 12px;
+              width: 46%;
+              margin: 0px 10px;
+              @include media-query(xs){
+                width: 44%;
+              }
+              @include media-query(wid40){
+                  width: 100%;
+                  margin-left: 0px;
+                  margin-right: 0px;
+              }
+              &:first-child{
+                  @include media-query(wid40){
+                      margin-bottom: 10px;
+                  }
+              }
+              a{
+                  text-align: center;
+                  padding: 15px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 100%;
+                  text-decoration: none;
+              }
+              
+              .ban-icon{
+                  height: 46px;
+                  width: 46px;
+                  background: #fff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center; 
+                  margin: 0 auto;  
+                  border-radius: 50%;      
+                  img{
+                      max-width: 25px;
+                  }               
+              }
+              p{
+                  margin-top: 15px;
+                  margin-bottom: 0px;
+                  text-transform: uppercase;
+                  @include font18($color-blue);
+                  font-weight: 700;
+              }
+          }
+          li:last-child{
+              img{
+                  max-width: 29px;
+              }
+          }
+      }
+      .com-back-head{
+          position: relative;
+          z-index: 0;
+          display: inline-block;
+          margin-top: 10px;
+          @include media-query(wid40){
+              // display: block;
+          }
+          &:after{
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 85%;
+              background: $color-blue;
+              left: 0;
+              z-index: -1;
+              bottom: 13px;
+              @include media-query(sm){
+                bottom: 7px;
+                padding-top: 6px;
+              }
+          }
+      }
+  }
+}
+// common hero banner with background ends here
+
+// common hero banner with image start here
+.common-image-bg{
+  padding-top: 280px;
+  padding-bottom: 60px;
+  @include media-query(xl){
+    padding-top: 250px;
+  }
+  @include media-query(lg){
+    padding-top: 280px;
+  }
+  @include media-query(md){
+      padding-top: 120px;
+  }
+  @include media-query(sm){
+      padding-top: 100px;
+      padding-bottom: 40px;
+  }
+  .banner-content{
+    .heading{
+      h1{
+          color:$color-blue;
+          text-transform: uppercase;
+          @include media-query(wid60){
+            margin-bottom: 30px;
+            text-align: center;
+          }
+          br{
+              @include media-query(sm){
+                  display: none;
+              }
+          }
+      }
+    }
+      .com-back-head{
+          position: relative;
+          z-index: 0;
+          display: inline-block;
+          margin-top: 10px;
+          @include media-query(wid40){
+              // display: block;
+          }
+          &:after{
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 85%;
+              background: $color-yellow;
+              left: 0;
+              z-index: -1;
+              bottom: 13px;
+              color: $color-blue;
+              @include media-query(sm){
+                bottom: 7px;
+                padding-top: 6px;
+              }
+          }
+      }
+      ul{
+        list-style: none;
+        margin-top: 30px;
+        li{
+          display: flex;
+          align-items: center;
+          @include font(24px, 30px, #0E173D, $Avenir-Regular);
+          margin-top: 10px;
+          @include media-query(xxl){
+            font-size: 20px;
+            line-height: 20px;
+          }
+          @include media-query(xl){
+            font-size: 18px;
+            line-height: 20px;
+          }
+          svg{
+            height: 40px;
+            width: 40px;
+            color: #39B54A;
+            margin-right: 15px;
+            @include media-query(xl){
+              height: 30px;
+              width: 30px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+  }
+  .com-banner-img{
+    text-align: right;
+    img{
+        width: 100%;
+    }
+  }
+  .MuiGrid-container{
+      align-items: center;
+  }  
+}
+// common hero banner with image ends here
+
+// common card compare start here
+.common-card-compare{
+  background-color: $color-blue;
+  // @include cm-padding;
+  padding: 50px 0;
+  @include media-query(xl){
+    padding: 40px 0;
+  }
+  .heading{
+      h3{
+          color: $color-white;
+          span{
+              background-color:$color-yellow;
+              color: $color-blue;
+          }
+      }
+  }
+  .inner-com-select{
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      justify-content: flex-end;
+      @include media-query(xl){
+        justify-content: flex-start;
+      }
+      @include media-query(wid1279){
+        margin-top: 30px;
+      }
+      @include media-query(xs){
+        flex-wrap: wrap;
+      }
+      .inner-input{
+        margin: 0px;        
+        @include media-query(xs){
+          width: 100%;
+        }
+        input{
+          padding: 0px;
+          &::placeholder{
+            color: $color-black;
+            opacity: 1;
+          }
+        }
+      }
+      .inner-select , .inner-input{
+          background: $color-white;
+          max-width: 190px!important;
+          height: 37px;
+          border-radius: 10px;
+          box-sizing: border-box;
+          border:none;
+          padding: 10px;
+          color: $color-black;
+          margin-right: 50px;
+          @include media-query(xl){
+            max-width: 170px !important;
+            margin-right: 40px;
+          }
+          @include media-query(wid1279){
+            max-width: 270px !important;
+            margin-right: 80px;
+          }
+          @include media-query(md){
+            max-width: 200px !important;
+            margin-right: 50px;
+          }
+          @include media-query(sm){
+            max-width: 150px !important;
+            margin-right: 20px;
+          }
+          @include media-query(xs){
+            max-width: 100%!important;
+            margin-right:0px ;
+            margin-bottom: 20px;
+          }
+          :focus{
+            outline: none;
+          }
+      }
+      fieldset{
+        border: none;
+      }
+      button{
+          height: 37px;
+          font-size: 18px!important;
+          line-height: 25px!important;
+          padding: 8px 25px!important;
+          font-family: $Avenir-Bold;
+          @include media-query(xl){
+            font-size: 16px!important;
+            line-height: 20px!important;
+          }
+          @include media-query(sm){
+            font-size: 15px!important;
+            line-height: 20px!important;
+          }
+          &:hover{
+              background-color: $color-white;
+              color: $color-blue;
+          }
+      }
+  }
+}
+// common card compare end here
+// compare common slider css start here
+.compare-com-slider{
+  @include cm-padding;
+  position: relative;
+  z-index: 0;
+  &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: $color-blue;
+      z-index: -1;
+  }
+  .compare-slider{
+      .owl-stage-outer{
+          // overflow: hidden;
+          .owl-stage{
+              // display: flex;
+              overflow: hidden;
+              display: flex;
+              .owl-item{
+                  height: auto;
+              }
+              
+          }
+      }
+      .owl-dots{
+          padding-top: 30px;
+          @include media-query(sm){
+              padding-top: 10px;
+          }
+          .owl-dot {
+              background-color: transparent!important;
+              span{
+                  width: 27px;
+                  height: 27px;
+                  background: #C4C4C4;
+                  @include media-query(xl){
+                      width: 20px;
+                      height: 20px;
+                  }
+                  @include media-query(md){
+                    width: 15px;
+                    height: 15px;
+                }
+              }
+              &.active{
+                  span{
+                      background: $color-blue;
+                  }
+              }
+          }
+      }
+      .compare-btn{
+          text-align: center;
+          padding-top: 50px;
+          margin-bottom: 10px;
+          @include media-query(xl){
+              padding-top: 40px;
+          }
+          @include media-query(sm){
+              padding-top: 30px;
+          }
+      }
+  }
+  .MuiGrid-container{
+      overflow: hidden;
+      .MuiGrid-root{
+          overflow: hidden
+      }
+  }
+}
+// compare common slider css end here
+
+// common accordian style start here
+.com-accordian-question{
+  background: #F6F6F6;
+  @include cm-padding;
+  .accordian-inner{
+      .accordian-main{
+          box-shadow: none;
+          background: transparent;
+          margin-bottom: 20px;
+          &:last-child{
+            margin-bottom: 0px;
+          }
+          &::before{
+              content: none;
+          }
+          .accordian-title{
+              background: #fff;
+              padding: 8px 20px;
+              @include media-query(sm){
+                padding: 0px 20px;
+              }
+              h4{
+                  @include font30;
+              }
+              svg {
+                  color: #09318b;
+              }
+              .Mui-expanded {
+                  svg{
+                      margin-top: -16px;
+                  }
+              }
+          }
+          .accordian-discription{
+              padding: 30px 20px 10px;
+              @include media-query(sm){
+                padding: 20px 20px 0px;
+              }
+              p{
+                p{
+                  margin-bottom: 15px;
+                  &:last-child{
+                    margin: 0px;
+                  }
+                }
+              }
+          }
+      }
+  }
+}
+// common accordian style end here
+
+// common image box start here
+.com-img-box{
+  padding:50px 0;
+  background-color: $color-yellow;
+  @include media-query(xl){
+    padding: 40px 0;
+  }
+  .img-col-box{
+    @include media-query(wid1279){
+      margin: 10px 0;
+    }
+    @include media-query(wid40){
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+    &:first-child{
+      @include media-query(wid40){
+        margin-top: 0px;
+      }
+    }
+    &:last-child{
+      @include media-query(wid40){
+        margin-bottom: 0px;
+      }
+    }
+  }
+    .image-box{
+      background-color: $color-white;
+      margin: 0px 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.18);
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      
+      img {
+          max-width: 90px;
+      }
+      h3{
+        @include font30;
+        color: $color-black;
+        margin-top: 20px;
+      }
+    }
+  
+}
+// common image box end here

@@ -1,0 +1,172 @@
+@import "../../../../app/AppVariables.scss";
+.MuiContainer-root{
+  &.header-wrap{
+    @include media-query(md){
+      max-width: 100%!important;
+    }
+  }
+}
+.header-wrap {
+  position: relative;
+  @include media-query(md){
+    max-width: 100%!important;
+    display: block;
+    padding: 0px!important;
+    margin: 0px!important;
+    width: 100%!important;
+  }
+}
+header.main-header {
+  position: absolute;
+  top: 35px;
+  // z-index: 99999999;
+  z-index: 9;
+  background-color: #fff !important;
+  box-shadow: 0 0 10px #ccc;
+  left: 15px;
+  right: 15px;
+  width: calc(100% - 30px);
+  padding: 10px 20px 15px !important;
+  border-radius: 10px;
+  // position: relative;
+  @include media-query(xl){
+    padding: 10px 10px 15px !important;
+  }
+  @include media-query(md){
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    border-radius: 0px;
+    padding-bottom: 10px!important;
+  }
+  .logo{
+    img{
+      @include media-query(xxl){
+        max-width: 200px;
+      }
+      @include media-query(md){
+        max-width: 130px;
+      }
+    }    
+  }
+  button {
+    &.apply-now{
+      padding: 10px 30px;
+      margin-right: 30px;
+      color: $color-white;
+      @include media-query(md){
+        margin-right: 10px;
+      }
+      @include media-query(xs){
+        display: none;
+
+      }
+      span{
+        color: $color-white;
+      }
+      &:hover{
+        span{
+          color: $color-white;
+        }
+      }
+    }
+
+    &.search-btn {
+      padding: 5px 20px 0 20px;
+      margin-right: 30px;
+      img {
+        width: 25px;
+        height: 30px;
+      }
+    }
+    &.call-btn {
+      width: 375px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 10px;
+      max-width: 100%;
+      @include media-query(xxl) {
+        width: 280px;
+      }
+      @include media-query(xl) {
+        width: 300px;
+      }
+      @include media-query(md){
+        display: none;
+      }
+      .MuiButton-label {
+        display: inline-flex;
+      }
+      .MuiAvatar-circular {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        @include media-query(xl) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+      .contact {
+        width: calc(100% - 50px);
+        padding-left: 20px;
+        display: inline-block;
+      }
+    }
+    &.MuiButton-containedPrimary {
+      background-color: $color-blue;
+    }
+    > div {
+      display: inline-block;
+      width: 100px;
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      @include font(24px, 30px, $color-white, $Avenir-Bold);
+      @include media-query(xxl) {
+        font-size: 20px;
+      }
+      @include media-query(xl) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      text-align: left;
+      & + span {
+        font-size: 36px;
+        @include media-query(xxl) {
+          font-size: 25px;
+        }
+        @include media-query(xl) {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .mobile-toggle, .mobile-call{
+    display: none;
+    @include media-query(md){
+      display: block;
+      margin-left: 15px;
+      font-size: 25px;
+    }
+  }
+  .mobile-call{
+    color: $color-blue;
+    margin-right: 40px;
+  }
+  .mobile-toggle{
+    color: $color-blue;
+    font-size: 30px;
+    margin-left: 0px;
+  }
+  .toggle-close{
+    display: none;
+  }
+  
+  .MuiGrid-container{
+    @include media-query(md){
+      justify-content: space-between;
+    }
+  }
+}

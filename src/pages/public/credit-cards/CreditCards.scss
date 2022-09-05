@@ -1,0 +1,22 @@
+@import "../../../app/AppVariables.scss";
+.credit-card-banner{
+    .com-banner-img{
+        img{
+            max-width: 573px;
+        }
+    }
+}
+.credit-compare-slider{
+    &:after{
+        background: $color-yellow!important;
+    }
+    .compare-price{
+        & > span{
+            padding-top: 30px!important;
+        }
+        button{
+            margin-top: 20px!important;
+        }
+    }
+    
+}
