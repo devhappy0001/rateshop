@@ -9,9 +9,11 @@ import Insurance from './insurance/Insurance';
 import Contact from './contact/Contact';
 import MoneyTransfers from './money-transfers/MoneyTransfers';
 import CreditScore from './credit-score/CreditScore';
+import Cards from './cards/Cards';
+import Eligibility from './Eligibility/Eligibility';
+import Result from './result/Result';
 
-export {
-
+export { 
     Home,
     Loans,
     CreditCards,
@@ -22,6 +24,9 @@ export {
     Insurance,
     Contact,
     MoneyTransfers,
-    CreditScore
+    CreditScore,
+    Cards,
+    Eligibility,
+    Result
 }
 

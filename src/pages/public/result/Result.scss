@@ -1,0 +1,282 @@
+@import "../../../app/AppVariables.scss";
+
+.best-results{
+   padding-top: 80px;
+   h1{
+        @include fontBold(28px,1,$color-blue);
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .card-types{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
+            li{
+                margin:30px 12px 0;
+                width: calc(25% - 24px);
+            }
+        }
+    }
+    .edit-my-answers{
+        margin: 37px 0 10px;
+    }
+}
+// 
+.card-listings{
+    padding-bottom: 70px;
+    .cards-wrapper{
+        border-radius: 12px;
+        background-color: #F6F6F6;
+        margin-top: 42px;
+        .card-inner {
+            padding: 23px 100px 40px;
+            .card-left-img {
+                width: 176px;
+                figure,img{
+                    width: 100%;
+                }
+            }
+            .right-card-details {
+                width: calc(100% - 176px);
+                padding-left: 24px;
+                .right-top-details{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    .title-rating{
+                        width: calc(100% - 276px);
+                        padding-right: 30px;
+                        h3{
+                            @include fontBold(28px ,1 ,$color-blue);
+                            margin: 50px 0 65px 0;
+                        }
+                        .card-rating{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            ul{
+                                list-style: none;
+                                padding: 0;
+                                margin: 0 12px 14px 0 ;
+                                display: flex;
+                                align-items: center;
+                                li{
+                                    width: 21px;
+                                    margin-right: 6px;
+                                    display: inline-block;
+                                    svg{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            p{
+                                @include fontRegular(17px,20px,$color-blue);
+                                margin-bottom: 14px;
+                            }
+                        }
+                        .card-badge{
+                            p{
+                                @include fontRegular(17px,20px,$color-white);
+                                margin-bottom: 0;    
+                                padding: 1px 10px;
+                                background-color: $color-blue;
+                                display: inline-block;
+                                border-radius: 6px;
+                                min-width: 76px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .earning-approval{
+                    width: 276px;
+                    .earning-approval-inner{
+                        background-color: $color-blue;
+                        border-radius: 8px;
+                        margin-bottom: 16px;
+                        overflow: hidden;
+                        .featues{
+                            text-align: center;
+                            p{
+                                @include fontRegular(16px,20px,$color-black);
+                                padding: 3px 20px;
+                                display: inline-block;
+                                background-color: $color-yellow;
+                                border-radius: 0 0 8px 8px;
+                                margin-bottom: 16px;
+                            }
+                        }
+                        .card-earn{
+                            padding: 0 10px;
+                            text-align: center;
+                            p{
+                                @include fontBold(22px,20px,$color-white);
+                                margin-bottom: 17px;
+                                span{
+                                        font-size: 30px;
+                                }
+                            }
+                        }
+                        .card-short-info{
+                            padding: 0 10px;
+                            text-align: center;
+                            p{
+                                @include fontRegular(17px,20px,$color-white);
+                                margin-bottom: 17px; 
+                            }
+                        }
+                        .card-approval{
+                            padding: 10px 10px;
+                            background-color: $color-yellow;
+                            p{
+                                @include fontBold(15px,20px,$color-blue);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                svg{
+                                    width: 24px;
+                                    margin-right: 12px;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+                // redemption-flexibility
+                .redemption-flexibility{
+                    max-width: 676px;
+                    h3{
+                        @include fontBold(22px,1,$color-blue);
+                        margin:7px 0;
+                    }
+                    .redemption-status{
+                        display: flex;
+                        align-items: center;
+                        ul{
+                            width: 100%;
+                            max-width: 676px;
+                            display: flex;
+                            align-items: center;
+                            padding: 0;
+                            margin: 0;
+                            list-style: none;
+                            li{
+                                width: calc(33.33% - 13.33px);
+                                margin: 4px 0;
+                                &+li{
+                                    margin-left: 20px;
+                                }
+                                span{
+                                    background: #BFBFBF;    
+                                    border-radius: 6.5px;
+                                    display: block;
+                                    width: 100%;
+                                    height: 8px;
+                                }
+                                &.active{
+                                    span{
+                                        background: $color-blue;
+                                    }
+                                }
+                            }
+                        }
+                        p{
+                            @include fontBold(17px,20px,$color-blue); 
+                            padding-left: 27px;
+                        }
+                    }
+                    >p{
+                        @include fontRegular(17px,20px,$color-blue); 
+                        margin: 10px 0 27px 0;
+                    }                    
+                }
+                // earn-rewards
+                .earn-rewards{
+                    margin-bottom: 37px;
+                    max-width: 676px;
+                    h3{
+                        @include fontBold(22px,1,$color-blue);
+                        margin-bottom: 14px;
+                    }
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        border-bottom: 2px solid $color-blue;
+                        li{
+                            padding: 28px 0 24px 0;
+                            border-top: 2px solid $color-blue;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            h5{
+                                @include fontBold(28px,20px,$color-blue);
+                                margin-bottom: 0;
+                                padding-right: 57px;
+                            }
+                            p{
+                                @include fontBold(17px,20px,$color-blue);
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                // inner-card-details
+                .inner-card-details{
+                    margin-bottom: 17px;
+                    max-width: 676px;
+                    h3{
+                        @include fontBold(22px,1,$color-blue);
+                        margin-bottom: 19px;
+                    }
+                    ul{
+                        padding: 0 0 0 20px;
+                        margin: 0; 
+                        li{ 
+                            @include fontRegular(18px,20px, #262626); 
+                            margin-bottom: 18px;
+                        }
+                    }
+                }
+                // see-more-btn
+                .see-more-btn {
+                    max-width: 676px;
+                    text-align: right;
+                    margin-bottom: 28px;
+                }
+                // go-site-btn
+                .go-site-btn{
+                    margin-bottom: 30px;
+                    max-width: 676px;
+                }
+            }
+        }
+        .card-bottom-details{
+            padding: 32px 70px;
+            border-radius: 12px;
+            background-color: $color-yellow;
+            ul{
+                list-style: none;
+                li{
+                    width: 25%;
+                    padding: 0 10px;
+                    p{
+                        @include fontRegular(17px,20px,$color-blue); 
+                    }
+                    h5{
+                        @include fontBold(24px,1,$color-blue); 
+                        margin: 8px 0;
+                    }
+                }
+            }
+        }
+    }
+}

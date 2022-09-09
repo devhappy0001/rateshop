@@ -125,6 +125,9 @@ import latestblog4 from '../assets/public/images/latest-blog-4.png';
 import latestblog5 from '../assets/public/images/latest-blog-5.png';
 import latestblog6 from '../assets/public/images/latest-blog-6.png';
 import chatrobot from '../assets/public/images/chat-robot.png';
+import koho from '../assets/public/images/koho.png';
+import home from '../assets/public/images/home.png';
+import bmo from '../assets/public/images/bmo.png';
 
 export {
    
@@ -255,4 +258,7 @@ export {
     latestblog5,
     latestblog6,
     chatrobot,
+    koho,
+    home,
+    bmo
 }

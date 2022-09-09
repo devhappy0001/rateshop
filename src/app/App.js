@@ -12,7 +12,10 @@ import {
     Insurance,
     Contact,
     MoneyTransfers,
-    CreditScore
+    CreditScore,
+    Cards,
+    Eligibility,
+    Result
   } from '../pages/public/'
 import { AuthRoute,GuestRoute } from '../routes';  
 // import "./AppVariables.scss";
@@ -78,6 +81,24 @@ const App = () => {
                       name="credit-score-page" 
                       path="credit-score" 
                       element={<CreditScore/>} 
+                  />
+
+                  <Route 
+                      name="cards" 
+                      path="cards" 
+                      element={<Cards/>} 
+                  />
+                  
+                  <Route 
+                      name="eligibiity" 
+                      path="eligibiity" 
+                      element={<Eligibility/>} 
+                  />
+
+                  <Route 
+                      name="result" 
+                      path="result" 
+                      element={<Result/>} 
                   />
                   
                   {/* Auth-Routes */}
