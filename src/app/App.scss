@@ -906,6 +906,35 @@ $spacing: 10;
   width: 100%;
   margin-right: 0 !important;
   margin-left: 0 !important;
+  &.cicle-icon{
+    .Mui-checked{
+      &+.MuiFormControlLabel-label{
+        background-color: #F6F6F6;
+        color: #777777;
+        &::before{
+          background-color: $color-blue;
+        }
+      }
+    }
+    .MuiFormControlLabel-label{
+      position: relative;
+      text-align: left;
+      padding-left: 50px;
+      &::before{
+        content: "";
+        border: 1px solid #09318B;
+        background-color: #D9D9D9;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        min-width: 22px;
+        display: inline-block;
+        left: 14px;
+        position: absolute;
+        top: 14px;
+      }
+    }
+  }
   .MuiCheckbox-root,.MuiButtonBase-root{
     position: absolute;
     opacity: 0;
@@ -1104,4 +1133,31 @@ $spacing: 10;
         }
     }
   }
+}
+// read less button
+.read-less-btn{
+    button{
+        @include fontBold(24px,20px, $color-blue  !important); 
+        background-color: transparent !important;
+        text-transform: lowercase;
+        padding-left: 0;
+        padding-right: 0;
+        span.MuiButton-label{
+            span{
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background-color: $color-blue;
+                margin-right: 9px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::after{
+                    content: "-";
+                    color: #fff;
+                }
+            }
+        }
+    }
 }

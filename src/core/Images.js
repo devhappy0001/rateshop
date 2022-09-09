@@ -128,6 +128,9 @@ import chatrobot from '../assets/public/images/chat-robot.png';
 import koho from '../assets/public/images/koho.png';
 import home from '../assets/public/images/home.png';
 import bmo from '../assets/public/images/bmo.png';
+import duca from '../assets/public/images/duca.jpg';
+import highInterest from '../assets/public/images/high-interest.jpg';
+import savingBanner from '../assets/public/images/saving-banner.jpg'
 
 export {
    
@@ -260,5 +263,8 @@ export {
     chatrobot,
     koho,
     home,
-    bmo
+    bmo,
+    duca,
+    highInterest,
+    savingBanner
 }

@@ -1,0 +1,203 @@
+@import "../../../app/AppVariables.scss";
+
+// interest saving 
+.interest-savings{ 
+    position: relative;
+    z-index: 1;
+    padding: 312px 0 130px 0; 
+    .saving-bg{
+        position: absolute;
+        z-index: -2;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom:0;
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom:0;
+        background-color: rgba(22, 22, 22, 0.46);
+        z-index: -1;
+    }
+    h1{
+        text-align: center;
+        @include fontBold(48px,1,$color-white);
+        width: auto;
+        text-transform: uppercase;
+        display: inline-block;
+        span{
+            display: block;
+            background-color: $color-yellow ;
+            color: $color-blue;
+            width: auto;
+        }
+    }
+}
+// compare-saving
+.compare-saving{
+    .compare-saving-wrap{
+        padding: 70px 0;
+        border-bottom: 2px solid $color-blue;
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                width: 50%;
+                padding: 0 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3{
+                    @include fontBold(28px,1,$color-blue);
+                    margin-bottom: 20px;
+                }
+                p{
+                    @include fontRegular(17px,1,$color-blue);
+                    margin-bottom: 0;
+                    min-width: 344px;
+                }
+                .blue-bordered{
+                    max-width: 276px;
+                }
+            }
+        }
+    }
+}
+// advertising-disclosure
+.advertising-disclosure{
+    padding-top: 70px;
+    .advertising-disclosure-inner{
+        p{
+            @include fontRegular(22px,1,$color-blue);
+            padding-left: 100px;
+            margin-bottom: 20px;
+        }
+        h3{
+            display: block;
+            background-color:  $color-yellow;
+            border-radius: 12px;
+            @include fontBold(28px,1,#262626);
+            padding: 25px  68px 25px 98px; 
+            span{
+                color: $color-blue;
+                padding-right: 30px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+// bank-listing
+.bank-listing{
+    .banking-listing-inner{
+        margin-top: 35px;
+        background-color:#F6F6F6;
+        border-radius: 12px;
+        .bank-listing-top{
+            padding: 47px 100px 35px;
+            display: flex;
+            align-items: flex-start;
+            .listing-top-left{
+                width: calc(100% - 276px);
+                padding-right: 100px;
+                // bank name logo
+                .bank-name-logo {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 37px;
+                    figure{
+                        max-width: 126px;
+                        margin-right: 24px;
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    h3{
+                        @include fontBold(28px,1,$color-blue);
+                    }
+                }
+                // bank fees
+                .bank-fees{
+                    ul{
+                        margin-bottom: 52px;
+                        li{
+                            padding: 20px 0;
+                            border-bottom: 2px solid $color-blue;
+                            span{
+                                @include fontBold(28px,1,$color-blue);
+                                display: inline-block;
+                                +span{
+                                    margin-left: auto;
+                                    min-width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // other-information
+                .other-information{
+                    h3{
+                        @include fontBold(22px,1,$color-blue);
+                    }
+                    ul{
+                        padding-left: 20px;
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                        li{
+                            margin-top: 15px;
+                            @include fontRegular(18px,1,#262626);
+                        }
+                    }
+                }
+            }
+            .listing-top-right{
+                width: 276px;
+                text-align: center;
+                .listing-right-card{
+                    width: 100%;
+                    background-color: $color-blue;
+                    margin-bottom: 23px;
+                    border-radius: 8px;
+                    padding: 20px 15px 12px;
+                    h4{
+                        @include fontBold(30px,20px,$color-white);
+                        margin-bottom: 13px;
+                    }
+                    p{
+                        @include fontRegular(17px,20px,$color-white);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        // bank-listing-bottom
+        .bank-listing-bottom{
+            background-color: $color-blue;
+            border-radius: 12px;
+            padding: 12px 65px;
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    padding: 20px 35px;
+                    p{
+                        @include fontRegular(17px,20px,$color-white); 
+                    }
+                }
+            }
+        }
+    }
+    .show-more-btn{
+        display: flex;
+        justify-content: center;
+        margin: 60px 0;
+    }
+}

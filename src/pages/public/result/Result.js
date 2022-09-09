@@ -63,9 +63,9 @@ const Result = () => {
                                                 <h3>BMO AIR MILES® MasterCard®</h3>
                                                 <div className="card-rating">
                                                     <ul>
-                                                        <li><StarSvg/></li>
-                                                        <li><StarSvg/></li>
-                                                        <li><StarSvg/></li>
+                                                        <li className="active"><StarSvg/></li>
+                                                        <li className="active"><StarSvg/></li>
+                                                        <li className="active"><StarSvg/></li>
                                                         <li><StarSvg/></li>
                                                         <li><StarSvg/></li>
                                                     </ul>
@@ -148,7 +148,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color="secondary">read less</Button>
+                                            <Button variant=" " color="secondary"><span></span>read less</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -236,7 +236,7 @@ const Result = () => {
                                                 </ul>
                                                 <p>HIGH</p>
                                             </div>
-                                            <p>Redeem through your Air miles account, limited to certain airlines and dates</p>
+                                            <p>Redeem points against any purchase charged to your card</p>
                                         </div>
                                         {/* Earn Rewards */}
                                         <div className="earn-rewards">
@@ -274,7 +274,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color="secondary">read less</Button>
+                                            <Button variant=" " color="secondary"><span></span>read less</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -354,16 +354,16 @@ const Result = () => {
                                                     <li className="active">
                                                         <span></span>
                                                     </li>
-                                                    <li>
+                                                    <li className="active">
                                                         <span></span>
                                                         </li>
-                                                    <li>
+                                                    <li className="active">
                                                         <span></span>
                                                     </li>
                                                 </ul>
-                                                <p>LOW</p>
+                                                <p>HIGH</p>
                                             </div>
-                                            <p>Redeem through your Air miles account, limited to certain airlines and dates</p>
+                                            <p>Redeem points against any purchase charged to your card</p>
                                         </div>
                                         {/* Earn Rewards */}
                                         <div className="earn-rewards">
@@ -401,7 +401,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color="secondary">read less</Button>
+                                            <Button variant=" " color="secondary"><span></span>read less</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -427,7 +427,13 @@ const Result = () => {
                                         </li>
                                     </ul>
                                 </div>  
-                             </div>
+                             </div> 
+                             <div className="show-more-btn">
+                                <Button variant="contained" color="secondary">Show More</Button> 
+                            </div>
+                             <div className="info-text">
+                                <p><span>Disclaimer</span>: Financial institutions pay us for connecting them with customers, including by paying for advertisements, clicks, or when someone applies for/is approved for a product. Terms and conditions apply between you and the provider of the product - please be sure to review them. Product information and details vary for Quebec. The content provided on our site is for information only; it is not meant to be relied on or used in lieu of advice from a professional. Partners/Advertisers are not responsible for the accuracy of information on our site. However, not all products we list are tied to compensation for us. Our industry-leading education centres and calculators are available 24/7, free of charge, and with no obligation to purchase. To learn more, visit our <a>About us</a> page.</p>
+                            </div>
                         </Grid>
                     </Grid>
                 </Container>

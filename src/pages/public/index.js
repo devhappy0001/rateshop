@@ -12,6 +12,7 @@ import CreditScore from './credit-score/CreditScore';
 import Cards from './cards/Cards';
 import Eligibility from './Eligibility/Eligibility';
 import Result from './result/Result';
+import Result2 from './result2/Result2'
 
 export { 
     Home,
@@ -27,6 +28,7 @@ export {
     CreditScore,
     Cards,
     Eligibility,
-    Result
+    Result,
+    Result2
 }
 

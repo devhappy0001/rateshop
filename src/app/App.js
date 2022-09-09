@@ -15,7 +15,8 @@ import {
     CreditScore,
     Cards,
     Eligibility,
-    Result
+    Result,
+    Result2
   } from '../pages/public/'
 import { AuthRoute,GuestRoute } from '../routes';  
 // import "./AppVariables.scss";
@@ -99,6 +100,12 @@ const App = () => {
                       name="result" 
                       path="result" 
                       element={<Result/>} 
+                  />
+                  
+                  <Route 
+                      name="result2" 
+                      path="result2" 
+                      element={<Result2/>} 
                   />
                   
                   {/* Auth-Routes */}
