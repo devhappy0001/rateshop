@@ -130,8 +130,14 @@ import home from '../assets/public/images/home.png';
 import bmo from '../assets/public/images/bmo.png';
 import duca from '../assets/public/images/duca.jpg';
 import highInterest from '../assets/public/images/high-interest.jpg';
-import savingBanner from '../assets/public/images/saving-banner.jpg'
-
+import savingBanner from '../assets/public/images/saving-banner.jpg';
+import agent1 from '../assets/public/images/agent-1.jpg';
+import agent2 from '../assets/public/images/agent-2.png';
+import agent3 from '../assets/public/images/agent-3.png';
+import agent4 from '../assets/public/images/agent-4.png';
+import agent5 from '../assets/public/images/agent-5.png';
+import agent6 from '../assets/public/images/agent-6.png';
+import agent7 from '../assets/public/images/agent-7.png'; 
 export {
    
     logo,
@@ -266,5 +272,12 @@ export {
     bmo,
     duca,
     highInterest,
-    savingBanner
+    savingBanner,
+    agent1,
+    agent2,
+    agent3,
+    agent4,
+    agent5,
+    agent6,
+    agent7
 }

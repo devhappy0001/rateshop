@@ -59,12 +59,12 @@ const Testimonials = (props) => {
                             <img src={Quoteicon} alt="quote"/>
                         </div>
                         <Grid container className="align-items-center">
-                            <Grid sm={12} md={4} item lg={4} >
+                            <Grid sm={12} md={4} item lg={4}>
                                 <div className="heading">
                                     <h3><span>Test</span>imonials</h3>
                                 </div>
                             </Grid>
-                            <Grid sm={12} md={8} item lg={8} >
+                            <Grid sm={12} md={8} item lg={8}>
                                 <OwlCarousel
                                     // items={2}
                                     // className="owl-theme"

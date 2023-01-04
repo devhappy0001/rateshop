@@ -1,5 +1,7 @@
-import React, { useState,useEffect } from "react";
-import { Button, Container, Grid,AccordionSummary,AccordionDetails,Typography, TextField} from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Button, Container, Grid,
+    // AccordionSummary,AccordionDetails,Typography, TextField
+} from "@material-ui/core";
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import {
@@ -15,19 +17,19 @@ import {
     rss,
 }
 from "../../../core/Images";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
 import Testimonials from '../../../components/shared/testimonial/Testimonials';
 import Blog from '../../../components/shared/blog/Blog';
 import PartnerLogo from '../../../components/shared/partner-logo/PartnerLogo';
 import Partner from '../../../components/shared/partner/Partner';
-import CardCommon from "../../../components/shared/card-common/CardCommon";
-import Accordion from '@material-ui/core/Accordion';
-import AddIcon from '@material-ui/icons/Add';
-import MinimizeIcon from '@material-ui/icons/Minimize';
-import SelectUI from "../../../components/ui/select/SelectUI";
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+// import CardCommon from "../../../components/shared/card-common/CardCommon";
+// import Accordion from '@material-ui/core/Accordion';
+// import AddIcon from '@material-ui/icons/Add';
+// import MinimizeIcon from '@material-ui/icons/Minimize';
+// import SelectUI from "../../../components/ui/select/SelectUI";
+// import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import './contact.scss'
 import { NavLink } from "react-router-dom";
 const Contact = () => {
@@ -42,7 +44,7 @@ const Contact = () => {
                 <div className='contact-detail'>
                     <Container>
                         <Grid container>
-                            <Grid xs={12} sm={12} md={6} lg={6}>
+                            <Grid xs={12} sm={12} md={6} lg={6} item  className="cs-p0">
                                 <div className="detail-inner">
                                     <div className='heading'>
                                         <h3><span>Contact</span> Information</h3>
@@ -96,7 +98,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </Grid>
-                            <Grid lg={6}></Grid>
+                            <Grid lg={6} item  className="cs-p0"></Grid>
                         </Grid>
                     </Container>
                    
@@ -111,7 +113,7 @@ const Contact = () => {
         <section className="contact-alternate">
             <Container>
                 <Grid container>
-                    <Grid xs={12} sm={12} md={12} lg={12}>
+                    <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="alternate-inner">
                             <div className="heading">
                                 <h3>Alternate way to Connect with Us</h3>

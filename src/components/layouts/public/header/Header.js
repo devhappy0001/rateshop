@@ -25,7 +25,7 @@ const Header = () => {
               </div>
             </Grid>
             <Grid md={8} lg={8} item className="d-flex justify-content-end align-items-center">
-              <Button variant="contained" className="apply-now" color="secondry" >
+              <Button variant="contained" className="apply-now" color="secondary" >
                 {/* <img alt="Remy Sharp" src={searchImage} /> */}
                 Apply Now
               </Button>

@@ -1,4 +1,6 @@
-import {take,put,call,select,delay} from 'redux-saga/effects';
+import {take,put,call,
+    // select,delay
+} from 'redux-saga/effects';
 import * as authTypes from './authTypes';
 import {loginUserFailure, loginUserSuccess} from './authActions';
 import AuthFlowRequest  from '../../../api/public/authFlow-requests';

@@ -20,9 +20,26 @@ const Result = () => {
         {/* Result sec start here */}
             <section className="best-results">
                 <Container className="mt-200">
-                    <Grid container>
-                        <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid container spacing={2}>
+                        <Grid item  xs={12} sm={12} md={12} lg={12} >
                             <h1>Here are your best credit cards</h1>
+
+                            <h3 className="text-center cs-heading">Select credit score</h3>
+                            <div className="card-types">
+                                <RadioGroup
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue=""
+                                        name="radio-buttons-group-1"
+                                    >  
+                                    <ul>
+                                        <li><FormControlLabel value="excellent" className="blue-checkRadio cicle-icon" control={<Radio />} label="Excellent" /></li>
+                                        <li><FormControlLabel value="good" className="blue-checkRadio cicle-icon" control={<Radio />} label="Good" /></li>
+                                        <li><FormControlLabel value="fair" className="blue-checkRadio cicle-icon" control={<Radio />} label="Fair" /></li>
+                                        <li><FormControlLabel value="poor" className="blue-checkRadio cicle-icon" control={<Radio />} label="Poor" /></li>
+                                    </ul>
+                                </RadioGroup>
+                            </div>
+                            <h3 className="text-center cs-heading">Select Card Type</h3>
                             <div className="card-types">
                                 <RadioGroup
                                         aria-labelledby="demo-radio-buttons-group-label"
@@ -30,16 +47,18 @@ const Result = () => {
                                         name="radio-buttons-group"
                                     >  
                                     <ul>
-                                        <li><FormControlLabel value="Travel" className="blue-checkRadio cicle-icon" control={<Radio />} label="Travel" /></li>
-                                        <li><FormControlLabel value="Cash back" className="blue-checkRadio cicle-icon" control={<Radio />} label="Cash back" /></li>
-                                        <li><FormControlLabel value="Low" className="blue-checkRadio cicle-icon" control={<Radio />} label="Low interest" /></li>
-                                        <li><FormControlLabel value="Secured" className="blue-checkRadio cicle-icon" control={<Radio />} label="Secured" /></li>
+                                        <li><FormControlLabel value="reward" className="blue-checkRadio cicle-icon" control={<Radio />} label="Reward Cards" /></li>
+                                        <li><FormControlLabel value="low interest" className="blue-checkRadio cicle-icon" control={<Radio />} label="Low Interest Cards" /></li>
+                                        <li><FormControlLabel value="balance transfer" className="blue-checkRadio cicle-icon" control={<Radio />} label="Balance Transfer Cards" /></li>
+                                        <li><FormControlLabel value="Buisness card" className="blue-checkRadio cicle-icon" control={<Radio />} label="Business Cards" /></li>
+                                        <li><FormControlLabel value="credit-builder" className="blue-checkRadio cicle-icon" control={<Radio />} label="Credit Builder Cards" /></li>
+                                        <li><FormControlLabel value="us-dollar" className="blue-checkRadio cicle-icon" control={<Radio />} label="US Dollar Cards" /></li> 
                                     </ul>
                                 </RadioGroup>
                             </div>
-                            <div className="edit-my-answers"> 
+                            {/* <div className="edit-my-answers"> 
                                 <Button variant="contained" color="secondary">edit my answers</Button>
-                            </div>
+                            </div> */}
                         </Grid>
                     </Grid>
                 </Container>
@@ -47,8 +66,8 @@ const Result = () => {
             {/* cards listings */}
             <section className="card-listings">
                 <Container>
-                    <Grid container>
-                        <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid container spacing={0}>
+                        <Grid item  className="cs-p0"   xs={12} sm={12} md={12} lg={12} >
                              <div className="cards-wrapper">
                                 <div className="card-inner d-flex flex-wrap">
                                     <div className="card-left-img">
@@ -148,7 +167,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color="secondary"><span></span>read less</Button>
+                                            <Button   color="secondary"><span></span>read less</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -274,7 +293,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color="secondary"><span></span>read less</Button>
+                                            <Button   color="secondary"><span></span>read less</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -401,7 +420,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color="secondary"><span></span>read less</Button>
+                                            <Button   color="secondary"><span></span>read less</Button>
                                         </div>
                                     </div>
                                 </div>

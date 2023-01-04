@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useEffect } from "react";
 import { Button, Container, Grid } from "@material-ui/core";
 import "./Loans.scss";
 import { NavLink } from "react-router-dom";
@@ -21,11 +21,11 @@ import {
     application,
 }
 from "../../../core/Images";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import DigitalMortagage from '../../../components/shared/digital-mortagage/DigitalMortagage';
-import QuickApp from '../../../application/quick/QuickApp';
+// import DigitalMortagage from '../../../components/shared/digital-mortagage/DigitalMortagage';
+// import QuickApp from '../../../application/quick/QuickApp';
 import Testimonials from '../../../components/shared/testimonial/Testimonials';
 import Blog from '../../../components/shared/blog/Blog';
 import PartnerLogo from '../../../components/shared/partner-logo/PartnerLogo';
@@ -40,7 +40,7 @@ const Loans = () => {
         <section className='com-bg-banner loan-banner'>
             <Container>
                 <Grid container>
-                    <Grid xs={12} sm={12} md={12} lg={12}>
+                    <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="banner-content">
                             <div className="heading">
                                 <h1> <span className='com-back-head'>Get the loan</span><br/> that's right for you</h1>
@@ -77,7 +77,7 @@ const Loans = () => {
         </div>
         <div className="net-parent">
             <Grid container>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="network-box">
                         <div className="network-con-inner">
                             <div className="net-img">
@@ -93,7 +93,7 @@ const Loans = () => {
                         </div>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="network-box">
                         <div className="network-con-inner">
                             <div className="net-img">
@@ -109,7 +109,7 @@ const Loans = () => {
                         </div>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="network-box">
                         <div className="network-con-inner">
                             <div className="net-img">
@@ -141,7 +141,7 @@ const Loans = () => {
                 </h3>
             </div>
             <Grid container>
-                <Grid sm={5} md={5} lg={5}>
+                <Grid sm={5} md={5} lg={5} item  className="cs-p0">
                     <div className="work-slider-inner">
                         <ul>
                             <li>
@@ -159,7 +159,7 @@ const Loans = () => {
                         </ul>
                     </div>
                 </Grid>
-                <Grid sm={7} md={7} lg={7}>
+                <Grid sm={7} md={7} lg={7} item  className="cs-p0">
                     <div className="how-slider-img">
                         <img src={howitworkslider} alt="How it works" />
                     </div>
@@ -180,7 +180,7 @@ const Loans = () => {
                 </h3>
             </div>
             <Grid container>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="what-use-loan-box">
                         <div className="what-use-box-content">
                             <figure>
@@ -191,7 +191,7 @@ const Loans = () => {
                         <p>Upgrade the appearance of your home by updating the flooring, tiles, paint, or even do a full remodel for a more comfortable living area.</p>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="what-use-loan-box">
                         <div className="what-use-box-content">
                             <figure>
@@ -202,7 +202,7 @@ const Loans = () => {
                         <p>Pay off your outstanding credit card debts and other loans and merge them into a single, manageable loan. It’s time to get rid of several minimum monthly payments.</p>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="what-use-loan-box">
                         <div className="what-use-box-content">
                             <figure>
@@ -213,7 +213,7 @@ const Loans = () => {
                         <p>Upgrade your skills by going to college, or help send your children off to university. Help make up the difference that government loans leave.</p>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="what-use-loan-box">
                         <div className="what-use-box-content">
                             <figure>
@@ -224,7 +224,7 @@ const Loans = () => {
                         <p>Finance your business’s everyday operations like rent, payroll, and debt payments if you face unstable or unpredictable revenue throughout the year.</p>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="what-use-loan-box">
                         <div className="what-use-box-content">
                             <figure>
@@ -235,7 +235,7 @@ const Loans = () => {
                         <p>Manage your unexpected expenses like auto repairs, medical expenses, home repairs, dental bills, and others quickly and easily in an emergency.</p>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={6} md={4} lg={4}>
+                <Grid xs={12} sm={6} md={4} lg={4} item  className="cs-p0">
                     <div className="what-use-loan-box">
                         <div className="what-use-box-content">
                             <figure>
@@ -246,7 +246,7 @@ const Loans = () => {
                         <p>Stay prepared for everything that life might have planned for you, from buying a home or vehicle to getting married.</p>
                     </div>
                 </Grid>
-                <Grid xs={12} sm={12} md={12} lg={12}>
+                <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                     <div className="what-use-loan-btn">
                         <Button variant="contained" color="primary">Apply Now</Button>
                     </div>
@@ -266,12 +266,12 @@ const Loans = () => {
                 </div>
                 <div className="why-credit-bg">
                     <Grid container>
-                        <Grid sm={12} md={6} lg={6}>
+                        <Grid sm={12} md={6} lg={6} item  className="cs-p0">
                             <div className="why-credit-img">
                                 <img src={blogbig} alt="blogbig"/>
                             </div>
                         </Grid>
-                        <Grid sm={12} md={6} lg={6}>
+                        <Grid sm={12} md={6} lg={6} item  className="cs-p0">
                             <div className="why-credit-text">
                                 <h4>Why Credit Card Debt Is So Expensive – <br></br>What the Banks Won't Tell You</h4>
                             </div>
@@ -281,21 +281,21 @@ const Loans = () => {
             </div>
             <div className="how-use-inner">
                 <Grid container>
-                    <Grid sm={6} md={4} lg={4}>
+                    <Grid sm={6} md={4} lg={4} item  className="cs-p0">
                         <div className="how-use-inner-box">
                             <img src={housing} alt="housing"/>
                             <h5>In Mortgage & Housing News Today</h5>
                             <p>Sears Canada is once again making headlines despite having gone out of business nearly 12 months ago. This time, the issue is extended warranties; or rather, the lack of warranties.</p>
                         </div>
                     </Grid>
-                    <Grid sm={6} md={4} lg={4}>
+                    <Grid sm={6} md={4} lg={4} item  className="cs-p0">
                         <div className="how-use-inner-box">
                             <img src={homebuyer} alt="homebuyer"/>
                             <h5>Guide to Every First Time Homebuyer Program in Canada</h5>
                             <p>Sears Canada is once again making headlines despite having gone out of business nearly 12 months ago. This time, the issue is extended warranties; or rather, the lack of warranties.</p>
                         </div>
                     </Grid>
-                    <Grid sm={6} md={4} lg={4} className="last-child">
+                    <Grid sm={6} md={4} lg={4} item   className="cs-p0 last-child">
                         <div className="how-use-inner-box">
                             <img src={stresstest} alt="stresstest"/>
                             <h5>What Is the Mortgage Stress Test in Canada?</h5>
@@ -314,12 +314,12 @@ const Loans = () => {
         <Container>
             <div className="connect-inner">
                 <Grid container>
-                    <Grid xs={12} sm={6} md={6} lg={8}>
+                    <Grid xs={12} sm={6} md={6} lg={8} item  className="cs-p0">
                         <div className="connect-text">
                             <h3>Connect With a Lender In As Fast As Five Minutes</h3>
                         </div>
                     </Grid>
-                    <Grid xs={12} sm={6} md={6} lg={4}>
+                    <Grid xs={12} sm={6} md={6} lg={4} item  className="cs-p0">
                         <div className="connect-btn">
                             <Button variant="contained" color="secondary">Get Started Now</Button>
                         </div>

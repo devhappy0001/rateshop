@@ -57,6 +57,9 @@ const Footer = () => {
                             <li>
                                 <NavLink to="">Home Value</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/agent-directory">Agents</NavLink>
+                            </li>
                         </ul>
                     </Grid>
                     <Grid item sm={6} md={4} lg={4}>

@@ -7,6 +7,11 @@
         margin-bottom: 0;
         text-align: center;
     }
+    h3.text-center.cs-heading {
+        margin-top: 40px;
+        @include fontBold(18px,1,$color-blue);
+        margin-bottom: 0; 
+    }
     .card-types{
         ul{
             display: flex;
@@ -14,11 +19,20 @@
             list-style: none;
             padding: 0;
             margin: 0 auto;
-            max-width: 800px;
+            max-width: initial;
             width: 100%;
+            justify-content: center;
             li{
-                margin:30px 12px 0;
-                width: calc(25% - 24px);
+                margin:20px 12px 0;
+                width:auto;
+                min-width: 150px;
+                @include media-query(md){ 
+                }
+                @include media-query(wid480){
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -35,8 +49,21 @@
         margin-top: 42px;
         .card-inner {
             padding: 23px 100px 40px;
+            @include media-query(lg){
+                padding: 23px 50px 30px;
+            }
+            @include media-query(md){
+                padding: 23px 30px 30px;
+            }
+            @include media-query(xs){
+                padding: 15px;
+            }
             .card-left-img {
                 width: 176px;
+                @include media-query(md){
+                    width: 100%;
+                    max-width: 240px;
+                }
                 figure,img{
                     width: 100%;
                 }
@@ -44,6 +71,11 @@
             .right-card-details {
                 width: calc(100% - 176px);
                 padding-left: 24px;
+                @include media-query(md){
+                    width: 100%;
+                    padding-left: 0;
+                    margin-top: 30px;
+                }
                 .right-top-details{
                     display: flex;
                     align-items: flex-start;
@@ -51,9 +83,21 @@
                     .title-rating{
                         width: calc(100% - 276px);
                         padding-right: 30px;
+                        @include media-query(sm){
+                            width:100%;
+                            padding-right: 0;
+                            padding-bottom: 30px
+                        }
                         h3{
                             @include fontBold(28px ,1 ,$color-blue);
                             margin: 50px 0 65px 0;
+                            @include media-query(md){
+                                margin: 40px 0 36px 0;
+                                font-size: 22px;
+                            }
+                            @include media-query(sm){
+                                margin-top: 0;
+                            }
                         }
                         .card-rating{
                             display: flex;
@@ -101,6 +145,10 @@
                 }
                 .earning-approval{
                     width: 276px;
+                    @include media-query(sm){
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
                     .earning-approval-inner{
                         background-color: $color-blue;
                         border-radius: 8px;
@@ -208,6 +256,9 @@
                 .earn-rewards{
                     margin-bottom: 37px;
                     max-width: 676px;
+                    @include media-query(sm){
+                        margin-bottom: 30px;
+                    }
                     h3{
                         @include fontBold(22px,1,$color-blue);
                         margin-bottom: 14px;
@@ -223,14 +274,27 @@
                             display: flex;
                             align-items: center;
                             flex-wrap: wrap;
+                            @include media-query(md){
+                                padding: 20px 0;
+                            }
                             h5{
                                 @include fontBold(28px,20px,$color-blue);
                                 margin-bottom: 0;
                                 padding-right: 57px;
+                                @include media-query(md){
+                                    font-size: 23px
+                                }
+                                @include media-query(sm){
+                                    font-size: 18px;
+                                    padding-right: 30px;
+                                }
                             }
                             p{
                                 @include fontBold(17px,20px,$color-blue);
                                 margin-bottom: 0;
+                                @include media-query(md){
+                                    font-size: 16px
+                                }
                             }
                         }
                     }
@@ -249,6 +313,12 @@
                         li{ 
                             @include fontRegular(18px,20px, #262626); 
                             margin-bottom: 18px;
+                            @include media-query(md){
+                                font-size: 16px
+                            }
+                            @include media-query(xs){
+                                font-size: 15px
+                            }
                         }
                     }
                 }
@@ -269,17 +339,33 @@
             padding: 32px 70px;
             border-radius: 12px;
             background-color: $color-yellow;
+            @include media-query(md){
+                padding: 32px 10px;
+            }
+            @include media-query(sm){
+                padding: 10px 10px 25px 10px;
+            }
             ul{
                 list-style: none;
                 li{
                     width: 25%;
                     padding: 0 10px;
+                    @include media-query(sm){
+                        width: 50%;
+                        padding-top: 20px;
+                    }
                     p{
                         @include fontRegular(17px,20px,$color-blue); 
+                        @include media-query(md){
+                            font-size: 15px;
+                        }
                     }
                     h5{
                         @include fontBold(24px,1,$color-blue); 
                         margin: 8px 0;
+                        @include media-query(md){
+                            font-size: 20px;
+                        }
                     }
                 }
             }
@@ -298,4 +384,8 @@
             }
         }
     }
+}
+
+.text-center{
+    text-align: center;
 }

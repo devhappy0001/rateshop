@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"; 
 import AOS from 'aos';
+// import {Routes, Route, useNavigate} from 'react-router-dom';
 import "aos/dist/aos.css"; 
 import { Button, Container, Grid,Radio,RadioGroup,FormControlLabel, TextField,Checkbox} from "@material-ui/core";  
 import Partner from '../../../components/shared/partner/Partner';
@@ -8,6 +9,18 @@ import {
     EstimateSvg,EncryptedSvg
 }
 from "../../../core/ImgsesSvg";
+    // const navigate = useNavigate();
+
+    // const navigateToCards = () => { 
+    //   navigate('/cards');
+    // };
+    // const navigateToEligibility = () => { 
+    //     navigate('/eligibility');
+    //   };
+    //   const navigateToResult = () => { 
+    //     navigate('/result');
+    //   };
+
 const Cards = () => {
     useEffect(() => {
         AOS.init();
@@ -18,16 +31,16 @@ const Cards = () => {
         <section className="cards-wrap">
             <Container className="mt-200">
                 <Grid container>
-                    <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid item  xs={12} sm={12} md={12} lg={12}  >
                         <ul className="step-nav d-flex">
-                            <li className="filled">
-                                <span>1</span><p>Card type</p>
+                            <li className="filled" >
+                                <span>1</span><p  >Card type</p>
                             </li>
                             <li>
-                                <span>2</span><p>ELIGIBILITY</p>
+                                <span>2</span><p  >ELIGIBILITY</p>
                             </li>
                             <li>
-                                <span>3</span><p>RESULTS</p>
+                                <span>3</span><p >RESULTS</p>
                             </li>
                         </ul>
                         <div className="estimate-time-title">

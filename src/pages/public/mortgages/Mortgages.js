@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useEffect } from "react";
 import { Button, Container, Grid } from "@material-ui/core";
 import "./Mortgages.scss";
 import { NavLink } from "react-router-dom";
@@ -39,6 +39,7 @@ const Mortgages = () => {
             autoplay:false,
             dots:true,
             nav:false,
+            loop:false,
             responsive: {
               0: {
                   items: 1,
@@ -59,7 +60,7 @@ const Mortgages = () => {
         <section className='com-bg-banner mortgage-banner'>
             <Container>
                 <Grid container>
-                    <Grid xs={12} sm={12} md={12} lg={12}>
+                    <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="banner-content">
                             <div className="heading">
                                 <h1>Shop <span className='com-back-head'>mortgage rates</span> that<br/> you actually qualify for</h1>
@@ -93,10 +94,10 @@ const Mortgages = () => {
         </section>
     {/* Mortagage Banner Section End */}
 
-        <section class="compare-com-slider">
+        <section className="compare-com-slider">
             <Container>
                 <Grid container>
-                    <Grid lg={12}>
+                    <Grid lg={12} item  className="cs-p0">
                         <div className="compare-slider">
                         <OwlCarousel {...options} >
                             <CardCommon imageName={cmls}>
@@ -147,7 +148,7 @@ const Mortgages = () => {
                     </h3>
                 </div>
                 <Grid container>
-                    <Grid sm={5} md={5} lg={5}>
+                    <Grid sm={5} md={5} lg={5} item  className="cs-p0">
                         <div className="how-work-inner">
                             <ul>
                                 <li>Fill Quick 2 Min Application</li>
@@ -156,7 +157,7 @@ const Mortgages = () => {
                             </ul>
                         </div>
                     </Grid>
-                    <Grid sm={7} md={7} lg={7}>
+                    <Grid sm={7} md={7} lg={7} item  className="cs-p0">
                         <div className="how-work-img">
                             <img src={howitwork} alt="How it works" />
                         </div>

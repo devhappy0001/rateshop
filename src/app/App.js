@@ -16,8 +16,10 @@ import {
     Cards,
     Eligibility,
     Result,
-    Result2
+    Result2,
+    AgentsDirectory
   } from '../pages/public/'
+import AgentsDirectoryDetails from '../pages/public/agents-directory-detail/AgentsDirectoryDetails';
 import { AuthRoute,GuestRoute } from '../routes';  
 // import "./AppVariables.scss";
 import "./App.scss";
@@ -84,6 +86,20 @@ const App = () => {
                       element={<CreditScore/>} 
                   />
 
+                  
+                  <Route 
+                      name="agent-directory-page" 
+                      path="agent-directory" 
+                      element={<AgentsDirectory/>} 
+                  />
+
+                  
+                  <Route 
+                      name="agent-directory-detail-page" 
+                      path="agent-directory-detail" 
+                      element={<AgentsDirectoryDetails/>} 
+                  />
+
                   <Route 
                       name="cards" 
                       path="cards" 
@@ -107,6 +123,7 @@ const App = () => {
                       path="result2" 
                       element={<Result2/>} 
                   />
+                  
                   
                   {/* Auth-Routes */}
                   <Route name="profile" path="profile" element={<AuthRoute></AuthRoute>}/>

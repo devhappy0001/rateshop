@@ -11,9 +11,9 @@ import {
     worldremit,
 }
 from "../../../core/Images";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
 import Testimonials from '../../../components/shared/testimonial/Testimonials';
 import Blog from '../../../components/shared/blog/Blog';
 import PartnerLogo from '../../../components/shared/partner-logo/PartnerLogo';
@@ -42,7 +42,7 @@ const MoneyTranfers = () => {
         <section className='com-bg-banner money-transfer-banner'>
             <Container>
                 <Grid container>
-                    <Grid xs={12} sm={12} md={12} lg={12}>
+                    <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="banner-content">
                             <div className="heading">
                                 <h1>Find the best <br/><span className='com-back-head'>foreign exchange rates</span></h1>
@@ -58,7 +58,7 @@ const MoneyTranfers = () => {
         <section className="common-card-compare moneytransfer-card-compare">
             <Container>
                 <Grid container className="justify-center">
-                    <Grid xs={12} sm={12} md={12} lg={12}>
+                    <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="inner-com-select">
                             <div className="money-sending">
                                 <div className="money-sending-feild">
@@ -114,7 +114,7 @@ const MoneyTranfers = () => {
         </div>
         <Container>
             <Grid container className="justify-center">                
-                <Grid xs={12} sm={12} md={12} lg={12}>
+                <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                     <ul className="company-inner-box">
                         <li>
                             <div className="company-img">
@@ -151,48 +151,48 @@ const MoneyTranfers = () => {
         <section className="com-accordian-question moneytransfer-accordian">
             <Container>
                 <Grid container>
-                    <Grid sm={12} md={12} lg={12}>
+                    <Grid sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="accordian-inner">
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="accordian-main">
                                 <AccordionSummary expandIcon={expanded === 'panel1'?<MinimizeIcon/>:<AddIcon/>}rols="accordian1" id="accordian1" className='accordian-title'>
-                                    <Typography><h4>What is an international money transfer?</h4></Typography>
+                                    <Typography><span>What is an international money transfer?</span></Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className='accordian-discription'>
                                     <Typography>
-                                        <p>An international money transfer, or remittance, is when you send currency from country to another. The currency you send is converted to the currency of your choice, but is most often converted into the official currency of the recipient's country. If you were to send Canadian dollars to India, for example, it would be converted into Indian rupees before being received.</p>
+                                        An international money transfer, or remittance, is when you send currency from country to another. The currency you send is converted to the currency of your choice, but is most often converted into the official currency of the recipient's country. If you were to send Canadian dollars to India, for example, it would be converted into Indian rupees before being received.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
                             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className="accordian-main">
                                 <AccordionSummary expandIcon={expanded === 'panel2'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian2" id="accordian2" className='accordian-title'>
-                                    <Typography><h4>What does an international money transfer cost?</h4></Typography>
+                                    <Typography><span>What does an international money transfer cost?</span></Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className='accordian-discription'>
                                     <Typography>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                        sit amet blandit leo lobortis eget.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                        sit amet blandit leo lobortis eget.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
                             <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className="accordian-main">
                                 <AccordionSummary expandIcon={expanded === 'panel3'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian3" id="accordian3" className='accordian-title'>
-                                    <Typography><h4>Example Transfer</h4></Typography>
+                                    <Typography><span>Example Transfer</span></Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className='accordian-discription'>
                                     <Typography>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                        sit amet blandit leo lobortis eget.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                        sit amet blandit leo lobortis eget.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
                             <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} className="accordian-main">
                                 <AccordionSummary expandIcon={expanded === 'panel4'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian4" id="accordian4" className='accordian-title'>
-                                    <Typography><h4>How to save money on transfers</h4></Typography>
+                                    <Typography><span>How to save money on transfers</span></Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className='accordian-discription'>
                                     <Typography>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                        sit amet blandit leo lobortis eget.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                        sit amet blandit leo lobortis eget.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>

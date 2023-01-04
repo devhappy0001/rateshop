@@ -73,14 +73,14 @@ const Banking = () => {
         <section className='common-image-bg banking-banner'>
             <Container>
                 <Grid container>
-                    <Grid lg={6}>
+                    <Grid lg={6} item  className="cs-p0">
                         <div className='banner-content'>
                             <div className="heading">
                                 <h1>Find The Best <br/><span className="com-back-head">Bank Accounts</span></h1>
                             </div>
                         </div>
                     </Grid>
-                    <Grid lg={6}>
+                    <Grid lg={6} item  className="cs-p0">
                         <div className='com-banner-img'>
                             <img src={bankingbanner} alt="banking banner"/>
                         </div>
@@ -94,12 +94,12 @@ const Banking = () => {
          <section className="common-card-compare credit-card-compare">
              <Container>
                  <Grid container>
-                     <Grid  xs={12} sm={12} md={12} lg={5}>
+                     <Grid  xs={12} sm={12} md={12} lg={5} item  className="cs-p0">
                         <div className="heading">
                             <h3><span>Compare</span> Bank Accounts</h3>
                         </div>
                      </Grid>
-                     <Grid  xs={12} sm={12} md={12} lg={7}>
+                     <Grid  xs={12} sm={12} md={12} lg={7} item  className="cs-p0">
                          <div className="inner-com-select">
                             <TextField
                                 id="first-name"
@@ -134,37 +134,37 @@ const Banking = () => {
             <section className="com-img-box banking-image-box">
                 <Container>
                     <Grid container>
-                        <Grid xs={6} sm={4} md={3} lg={2} className="img-col-box">
+                        <Grid xs={6} sm={4} md={3} lg={2} item  className="cs-p0 img-col-box">
                             <div className="image-box">
                                 <img src={chequing} alt="Chequing"/>
                                 <h3>Chequing</h3>
                             </div>
                         </Grid>
-                        <Grid xs={6} sm={4} md={3} lg={2} className="img-col-box">
+                        <Grid xs={6} sm={4} md={3} lg={2} item  className="cs-p0 img-col-box">
                             <div className="image-box">
                                 <img src={savings} alt="Savings"/>
                                 <h3>Savings</h3>
                             </div>
                         </Grid>
-                        <Grid xs={6} sm={4} md={3} lg={2} className="img-col-box">
+                        <Grid xs={6} sm={4} md={3} lg={2} item  className="cs-p0 img-col-box">
                             <div className="image-box">
                                 <img src={children} alt="Children"/>
                                 <h3>Children</h3>
                             </div>
                         </Grid>
-                        <Grid xs={6} sm={4} md={3} lg={2} className="img-col-box">
+                        <Grid xs={6} sm={4} md={3} lg={2} item  className="cs-p0 img-col-box">
                             <div className="image-box">
                                 <img src={student} alt="Student"/>
                                 <h3>Student</h3>
                             </div>
                         </Grid>
-                        <Grid xs={6} sm={4} md={3} lg={2} className="img-col-box">
+                        <Grid xs={6} sm={4} md={3} lg={2} item  className="cs-p0 img-col-box">
                             <div className="image-box">
                                 <img src={senior} alt="Senior"/>
                                 <h3>Senior</h3>
                             </div>
                         </Grid>
-                        <Grid xs={6} sm={4} md={3} lg={2} className="img-col-box">
+                        <Grid xs={6} sm={4} md={3} lg={2} item  className="cs-p0 img-col-box">
                             <div className="image-box">
                                 <img src={business} alt="Business"/>
                                 <h3>Business</h3>
@@ -177,10 +177,10 @@ const Banking = () => {
 
 
         {/* banking comapre slider section start here */}
-          <section class="compare-com-slider banking-compare-slider">
+          <section className="compare-com-slider banking-compare-slider">
                 <Container>
                     <Grid container>
-                        <Grid lg={12}>
+                        <Grid lg={12} item  className="cs-p0">
                             <div className="compare-slider">
                             <OwlCarousel {...options} >
                                 <CardCommon imageName={eqbank}>
@@ -223,84 +223,84 @@ const Banking = () => {
             <section className="com-accordian-question banking-accordian">
                 <Container>
                     <Grid container>
-                        <Grid sm={12} md={12} lg={12}>
+                        <Grid sm={12} md={12} lg={12} item  className="cs-p0">
                             <div className="accordian-inner">
                                 <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel1'?<MinimizeIcon/>:<AddIcon/>}rols="accordian1" id="accordian1" className='accordian-title'>
-                                        <Typography><h4>Compare Bank Accounts.</h4></Typography>
+                                        <Typography><span>Compare Bank Accounts.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p> Bank accounts aren’t something that we think about very often. Most people get a youth account when they’re very young from the same institution that their parents bank at, then stay with them forever.</p>
-                                            <p>It may not occur to you, but you could actually be paying substantial bank fees without realizing you are, or that you don’t even have to! There are plenty of free banking options that offer the exact same features you would get from a Big 5 bank account. </p>
-                                            <p>“What’s the catch?” you might ask. But I’ll ask you, “What’s the catch with your current bank account?” Usually, they catches are minimum balances or $10 - $15 per month just for having somewhere to put your money. It doesn’t have to be this way! </p>
-                                            <p>If you’re fed up with paying high fees for the privilege of saving your own money, then it’s time to compare bank accounts. But don’t limit your search to one of the other big banks – take a look at smaller banks, online banks, or even credit unions. They often offer better service or better fees, and sometimes both!</p>
+                                             Bank accounts aren’t something that we think about very often. Most people get a youth account when they’re very young from the same institution that their parents bank at, then stay with them forever.<br></br>
+                                            It may not occur to you, but you could actually be paying substantial bank fees without realizing you are, or that you don’t even have to! There are plenty of free banking options that offer the exact same features you would get from a Big 5 bank account. <br></br>
+                                             “What’s the catch?” you might ask. But I’ll ask you, “What’s the catch with your current bank account?” Usually, they catches are minimum balances or $10 - $15 per month just for having somewhere to put your money. It doesn’t have to be this way! <br></br>
+                                             If you’re fed up with paying high fees for the privilege of saving your own money, then it’s time to compare bank accounts. But don’t limit your search to one of the other big banks – take a look at smaller banks, online banks, or even credit unions. They often offer better service or better fees, and sometimes both! 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                                 <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel2'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian2" id="accordian2" className='accordian-title'>
-                                        <Typography><h4>How to compare bank accounts in Canada.</h4></Typography>
+                                        <Typography><span>How to compare bank accounts in Canada.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.</p>
+                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                            sit amet blandit leo lobortis eget. 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                                 <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel3'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian3" id="accordian3" className='accordian-title'>
-                                        <Typography><h4>Monthly Fees.</h4></Typography>
+                                        <Typography><span>Monthly Fees.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.</p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                            sit amet blandit leo lobortis eget. 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                                 <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel4'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian4" id="accordian4" className='accordian-title'>
-                                        <Typography><h4>Free Interac e-Transfers.</h4></Typography>
+                                        <Typography><span>Free Interac e-Transfers.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.</p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                            sit amet blandit leo lobortis eget. 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                                 <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel5'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian5" id="accordian5" className='accordian-title'>
-                                        <Typography><h4>Interest Rate.</h4></Typography>
+                                        <Typography><span>Interest Rate.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.</p>
+                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                            sit amet blandit leo lobortis eget. 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                                 <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel6'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian6" id="accordian6" className='accordian-title'>
-                                        <Typography><h4>Putting it together.</h4></Typography>
+                                        <Typography><span>Putting it together.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.</p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                            sit amet blandit leo lobortis eget. 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
                                 <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')} className="accordian-main">
                                     <AccordionSummary expandIcon={expanded === 'panel7'?<MinimizeIcon/>:<AddIcon/>} aria-controls="accordian7" id="accordian7" className='accordian-title'>
-                                        <Typography><h4>Best Business Bank Accounts.</h4></Typography>
+                                        <Typography><span>Best Business Bank Accounts.</span></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails className='accordian-discription'>
                                         <Typography>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.</p>
+                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                            sit amet blandit leo lobortis eget. 
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>

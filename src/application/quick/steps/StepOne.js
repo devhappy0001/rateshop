@@ -29,7 +29,7 @@ const QuickRadio = (props, ref) => {
 
             />
             <label htmlFor={id} >
-                {image && <img src={image} />}
+                {image && <img src={image} alt="Rateshop" />}
                 <h4>{label}</h4>
             </label>
             {description && <span>{description}</span>}

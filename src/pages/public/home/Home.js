@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, {  useEffect } from "react";
+// import { NavLink } from "react-router-dom";
 import Teams from "../../../components/shared/team/Teams";
 import { Button, Container, Grid } from "@material-ui/core";
 import "./home.scss";
@@ -11,10 +11,10 @@ import {
   logo,
   logo2,
   logo3,
-  services1,
-  services2,
-  services3,
-  services4,
+  // services1,
+  // services2,
+  // services3,
+  // services4,
   worksImg1,
   worksImg2,
   worksImg3,
@@ -50,7 +50,7 @@ const Home = () => {
     <QuickThanks/>
     {/* banner start here */}
       <section className="banner">
-        <img src={banner} alt="img" className="banner-img"/>
+        <img src={banner} alt="Rateshop" className="banner-img"/>
         <Container>
           <Grid container>
             <Grid lg={6} item data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
@@ -86,13 +86,13 @@ const Home = () => {
             <Grid sm={6} md={6} lg={6} item>
               <ul className="award-logos d-flex justify-content-between align-items-center">
                 <li>
-                  <img src={logo} alt="logo" />
+                  <img src={logo} alt="Rateshop" />
                 </li>
                 <li>
-                  <img src={logo2} alt="logo" />
+                  <img src={logo2} alt="Rateshop" />
                 </li>
                 <li>
-                  <img src={logo3} alt="logo" />
+                  <img src={logo3} alt="Rateshop" />
                 </li>
               </ul>
             </Grid>
@@ -119,7 +119,7 @@ const Home = () => {
                 <div className="top-content">
                   <h5>Step 1</h5>
                   <figure>
-                    <img src={worksImg1} alt="img" />
+                    <img src={worksImg1} alt="Rateshop" />
                     <span></span>
                   </figure>
                 </div>
@@ -131,7 +131,7 @@ const Home = () => {
                 <div className="top-content">
                   <h5>Step 2</h5>
                   <figure>
-                    <img src={worksImg2} alt="img" />
+                    <img src={worksImg2} alt="Rateshop" />
                     <span></span>
                   </figure>
                 </div>
@@ -143,7 +143,7 @@ const Home = () => {
                 <div className="top-content">
                   <h5>Step 3</h5>
                   <figure>
-                    <img src={worksImg3} alt="img" />
+                    <img src={worksImg3} alt="Rateshop" />
                     <span></span>
                   </figure>
                 </div>
@@ -172,13 +172,13 @@ const Home = () => {
           </div>
           <div className="choose-rate-content">
             <div className="center-img" >
-              <img src={centerImage} alt="center Image"  data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000"/>
+              <img src={centerImage} alt="Rateshop"  data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000"/>
             </div>
             <Grid container>
               <Grid sm={4} md={4} lg={4} item>
                 <div className="choose-innner" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
                   <figure>
-                    <img src={choose1} alt="Image" />
+                    <img src={choose1} alt="Rateshop" />
                   </figure>
                   <h5 className="why-choose-title">Cutting-Edge Technology</h5>
                 </div>
@@ -187,7 +187,7 @@ const Home = () => {
               <Grid sm={4} md={4} lg={4} item>
                 <div className="choose-innner" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
                   <figure>
-                    <img src={choose2} alt="Image" />
+                    <img src={choose2} alt="Rateshop" />
                   </figure>
                   <h5 className="why-choose-title">
                     Solution For Any <br/>Income & Credit
@@ -197,7 +197,7 @@ const Home = () => {
               <Grid sm={4} md={4} lg={4} item className="left-center">
                 <div className="choose-innner" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
                   <figure>
-                    <img src={choose3} alt="Image" />
+                    <img src={choose3} alt="Rateshop" />
                   </figure>
                   <h5 className="why-choose-title">65+ Lenders</h5>
                 </div>
@@ -206,7 +206,7 @@ const Home = () => {
               <Grid sm={4} md={4} lg={4} item className="right-center">
                 <div className="choose-innner"  data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
                   <figure>
-                    <img src={choose4} alt="Image" />
+                    <img src={choose4} alt="Rateshop" />
                   </figure>
                   <h5 className="why-choose-title">200+ Mortgage Experts</h5>
                 </div>
@@ -214,7 +214,7 @@ const Home = () => {
               <Grid sm={4} md={4} lg={4} item>
                 <div className="choose-innner"  data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
                   <figure>
-                    <img src={choose5} alt="Image" />
+                    <img src={choose5} alt="Rateshop" />
                   </figure>
                   <h5 className="why-choose-title">Lowest Rate Guaranteed</h5>
                 </div>
@@ -223,7 +223,7 @@ const Home = () => {
               <Grid sm={4} md={4} lg={4} item>
                 <div className="choose-innner" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
                   <figure>
-                    <img src={choose6} alt="Image" />
+                    <img src={choose6} alt="Rateshop" />
                   </figure>
                   <h5 className="why-choose-title">Rated 5 Stars on Google</h5>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import './navbar.scss';
 import Button from '@material-ui/core/Button';
 import Grow from '@material-ui/core/Grow';
@@ -10,10 +10,21 @@ import MenuList from '@material-ui/core/MenuList';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
+ 
+  
 
 export default function Navbar() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
 
-  const open = true;
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  // const open = true;
 
   const [showClass, setShowClass] = React.useState('');
 
@@ -42,13 +53,14 @@ export default function Navbar() {
           <MenuItem><NavLink to="/blogs">Blogs</NavLink></MenuItem>
         </MenuList>
       </Paper>
-      <div className='mobile-menu'>
+      <div className='mobile-menu'> 
         <div className={`mobile-overlay ${showClass}`}></div>
         <Button ref={anchorRef} aria-controls={open ? 'menu-list-grow' : undefined} aria-haspopup="true" onClick={handleToggle} className={`mobile-toggle-btn ${showClass}`}>
           <MenuIcon className="mobile-toggle" />
           <CloseIcon className="mobile-toggle toggle-close" />
         </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal className={`mobile-menu-list  ${showClass}`}>
+        {/* <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal className={`mobile-menu-list  ${showClass}`}> */}
+        <Popper open={open} anchorEl={anchorRef.current} role={undefined}   disablePortal className={`mobile-menu-list  ${showClass}`}>
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
@@ -68,7 +80,7 @@ export default function Navbar() {
                   <MenuItem><NavLink to="/contact">Contact</NavLink></MenuItem>
                   <MenuItem><NavLink to="/blogs">Blogs</NavLink></MenuItem>
                   <MenuItem>
-                    <Button variant="contained" className="apply-now" color="secondry" >Apply Now</Button>
+                    <Button variant="contained" className="apply-now" color="secondary" >Apply Now</Button>
                   </MenuItem>
                 </MenuList>
               </Paper>

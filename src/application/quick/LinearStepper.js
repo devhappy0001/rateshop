@@ -192,9 +192,9 @@ const LinearStepper = () => {
                 {activeStep + 1} of 10
            </div> */}
            <Grid container className="step-bottom mobile-chat">
-                <Grid sm={12} md={12} lg={12} className="quick-chat">
+                <Grid sm={12} md={12} lg={12} item className="quick-chat">
                     <div className="chat-massage">
-                        <NavLink to="">
+                        <NavLink to="/">
                             <img src={chatrobot} alt="chat robot"/>
                         </NavLink>
                         <div className="chat-messgae-text"> Hi👋 I'm MAT! Your Mortgage Approval Tool. 🏠 Want the Lowest Mortgage Rate Guarantee?✨</div>
@@ -226,15 +226,15 @@ const LinearStepper = () => {
                             
                             {getStepContent({ activeStep, position, setPosition,purchasePrice,setPurchasePrice,setActiveStep,handleNext })}
                             <Grid container className="step-bottom">
-                                <Grid sm={12} md={6} lg={6} className="quick-chat desktop-chat">
+                                <Grid sm={12} md={6} lg={6} item  className="cs-p0 quick-chat desktop-chat">
                                     <div className="chat-massage">
-                                        <NavLink to="">
+                                        <NavLink to="/">
                                             <img src={chatrobot} alt="chat robot"/>
                                         </NavLink>
                                         <div className="chat-messgae-text"> Hi👋 I'm MAT! Your Mortgage Approval Tool. 🏠 Want the Lowest Mortgage Rate Guarantee?✨</div>
                                     </div>
                                 </Grid>
-                                <Grid sm={12} md={6} lg={6} className="prev-next-btn">
+                                <Grid sm={12} md={6} lg={6} item  className="cs-p0  prev-next-btn">
                                     {
                                         activeStep !== 0 && <Button
                                             className={classes.button}

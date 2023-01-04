@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from "react";
-import { Button, Container, Grid,AccordionSummary,AccordionDetails,Typography, TextField} from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Button, Container, Grid} from "@material-ui/core";
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import {
@@ -15,19 +15,19 @@ import {
     latestblog6,
 }
 from "../../../core/Images";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import Testimonials from '../../../components/shared/testimonial/Testimonials';
-import Blog from '../../../components/shared/blog/Blog';
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
+// import Testimonials from '../../../components/shared/testimonial/Testimonials';
+// import Blog from '../../../components/shared/blog/Blog';
 import PartnerLogo from '../../../components/shared/partner-logo/PartnerLogo';
 import Partner from '../../../components/shared/partner/Partner';
-import CardCommon from "../../../components/shared/card-common/CardCommon";
-import Accordion from '@material-ui/core/Accordion';
-import AddIcon from '@material-ui/icons/Add';
-import MinimizeIcon from '@material-ui/icons/Minimize';
-import SelectUI from "../../../components/ui/select/SelectUI";
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+// import CardCommon from "../../../components/shared/card-common/CardCommon";
+// import Accordion from '@material-ui/core/Accordion';
+// import AddIcon from '@material-ui/icons/Add';
+// import MinimizeIcon from '@material-ui/icons/Minimize';
+// import SelectUI from "../../../components/ui/select/SelectUI";
+// import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import { NavLink } from "react-router-dom";
 import './Blogs.scss'
 const Blogs = () => {
@@ -40,7 +40,7 @@ const Blogs = () => {
         <section className="common-image-bg blog-banner">
             <Container>
                 <Grid container>
-                    <Grid xs={12} sm={12} md={12} lg={12}>
+                    <Grid xs={12} sm={12} md={12} lg={12} item  className="cs-p0">
                         <div className="banner-content"> 
                             <div className="heading">
                                 <h1>OUR <span className="com-back-head">BLOGS</span></h1>
@@ -55,7 +55,7 @@ const Blogs = () => {
         <section className="top-blog">
             <Container>
                 <Grid container className="top-blog-container">
-                    <Grid xs={12} sm={6} md={4} lg={3} className="blog-col">
+                    <Grid xs={12} sm={6} md={4} lg={3} item  className="cs-p0 blog-col">
                         <div className="blog-inner">
                             <NavLink to="">
                                 <figure>
@@ -65,7 +65,7 @@ const Blogs = () => {
                             </NavLink>
                         </div>
                     </Grid>
-                    <Grid xs={12} sm={6} md={4} lg={3} className="blog-col">
+                    <Grid xs={12} sm={6} md={4} lg={3} item  className="cs-p0 blog-col">
                         <div className="blog-inner">
                             <NavLink to="">
                                 <figure>
@@ -75,7 +75,7 @@ const Blogs = () => {
                             </NavLink>
                         </div>
                     </Grid>
-                    <Grid xs={12} sm={6} md={4} lg={3} className="blog-col">
+                    <Grid xs={12} sm={6} md={4} lg={3} item  className="cs-p0 blog-col">
                         <div className="blog-inner">
                             <NavLink to="">
                                 <figure>
@@ -85,7 +85,7 @@ const Blogs = () => {
                             </NavLink>
                         </div>
                     </Grid>
-                    <Grid xs={12} sm={6} md={4} lg={3} className="blog-col">
+                    <Grid xs={12} sm={6} md={4} lg={3} item  className="cs-p0 blog-col">
                         <div className="blog-inner">
                             <NavLink to="">
                                 <figure>
@@ -103,13 +103,13 @@ const Blogs = () => {
         <section className="latest-blog">
             <Container>
                 <Grid container>
-                    <Grid sm={12} md={9} lg={9}>
+                    <Grid sm={12} md={9} lg={9} item  className="cs-p0">
                         <div className="latest-blog-left">
                             <div className="heading">
                                 <h3><span>Latest</span> Blogs</h3>
                             </div>
                             <Grid container>
-                                <Grid sm={6} md={6} lg={6} className="latest-blog-col">
+                                <Grid sm={6} md={6} lg={6} item  className="cs-p0 latest-blog-col">
                                     <div className="blog-content-box blog-left">
                                         <figure>
                                             <img src={latestblog1} alt="blog"/>
@@ -121,7 +121,7 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </Grid>
-                                <Grid sm={6} md={6} lg={6} className="latest-blog-col">
+                                <Grid sm={6} md={6} lg={6} item  className="cs-p0 latest-blog-col">
                                     <div className="blog-content-box blog-right">
                                         <figure>
                                             <img src={latestblog2} alt="blog"/>
@@ -133,7 +133,7 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </Grid>
-                                <Grid sm={6} md={6} lg={6} className="latest-blog-col">
+                                <Grid sm={6} md={6} lg={6} item  className="cs-p0 latest-blog-col">
                                     <div className="blog-content-box blog-left">
                                         <figure>
                                             <img src={latestblog3} alt="blog"/>
@@ -145,7 +145,7 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </Grid>
-                                <Grid sm={6} md={6} lg={6} className="latest-blog-col">
+                                <Grid sm={6} md={6} lg={6} item  className="cs-p0 latest-blog-col">
                                     <div className="blog-content-box blog-right">
                                         <figure>
                                             <img src={latestblog4} alt="blog"/>
@@ -157,7 +157,7 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </Grid>
-                                <Grid sm={6} md={6} lg={6} className="latest-blog-col">
+                                <Grid sm={6} md={6} lg={6} item  className="cs-p0 latest-blog-col">
                                     <div className="blog-content-box blog-left">
                                         <figure>
                                             <img src={latestblog5} alt="blog"/>
@@ -169,7 +169,7 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </Grid>
-                                <Grid sm={6} md={6} lg={6} className="latest-blog-col">
+                                <Grid sm={6} md={6} lg={6} item  className="cs-p0 latest-blog-col">
                                     <div className="blog-content-box blog-right">
                                         <figure>
                                             <img src={latestblog6} alt="blog"/>
@@ -187,7 +187,7 @@ const Blogs = () => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid sm={12} md={3} lg={3}>
+                    <Grid sm={12} md={3} lg={3} item  className="cs-p0">
                         <div className="latest-blog-right">
                             <div className="right-blog-box">
                                 <h4>Blog by topic</h4>

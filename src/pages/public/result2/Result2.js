@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"; 
 import AOS from 'aos';
 import "aos/dist/aos.css"; 
-import { Button, Container, Grid, TextField} from "@material-ui/core";   
+import { Button, Container, Grid, TextField, Radio, RadioGroup, FormControlLabel} from "@material-ui/core";   
 import './Result2.scss'; 
 import {
     duca,highInterest,eqbank,savingBanner
@@ -23,7 +23,7 @@ const Result = () => {
             <img src={savingBanner} alt="" className="saving-bg"/>
             <Container >
                 <Grid container>
-                    <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2} className="d-flex justify-content-center">
+                    <Grid item  xs={12} sm={12} md={12} lg={12}   className="d-flex justify-content-center">
                         <h1>The best high interest savings <span>accounts in Canada for 2022</span></h1> 
                     </Grid>
                 </Grid>
@@ -33,7 +33,7 @@ const Result = () => {
         <section className="compare-saving">
             <Container>
                 <Grid container>
-                    <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid item  xs={12} sm={12} md={12} lg={12} >
                         <div className="compare-saving-wrap">
                             <ul className="d-flex align-items-center">
                                 <li>
@@ -52,6 +52,47 @@ const Result = () => {
                             </ul>
                         </div>
                     </Grid>
+                    <Grid item  xs={12} sm={12} md={12} lg={12} >
+                        <div className="compare-saving-wrap">
+                        <h3 className="text-center cs-heading">Select Network</h3>
+                            <div className="card-types">
+                                <RadioGroup
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue=""
+                                        name="radio-buttons-group-1"
+                                    >  
+                                    <ul>
+                                        <li><FormControlLabel value="Interac" className="blue-checkRadio cicle-icon" control={<Radio />} label="Interac" /></li>
+                                        <li><FormControlLabel value="Mastercard" className="blue-checkRadio cicle-icon" control={<Radio />} label="Mastercard" /></li>
+                                        <li><FormControlLabel value="Exchange" className="blue-checkRadio cicle-icon" control={<Radio />} label="The Exchange" /></li>
+                                        <li><FormControlLabel value="netowrk" className="blue-checkRadio cicle-icon" control={<Radio />} label="The Exchange netowrk ATMs" /></li>
+                                        <li><FormControlLabel value="Visa" className="blue-checkRadio cicle-icon" control={<Radio />} label="Visa Plus " /></li>
+                                    </ul>
+                                </RadioGroup>
+                            </div>
+                            </div>
+                    </Grid>
+                    <Grid item  xs={12} sm={12} md={12} lg={12} >
+                        <div className="compare-saving-wrap">
+                        <h3 className="text-center cs-heading">Select Account Type</h3>
+                            <div className="card-types">
+                                <RadioGroup
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue=""
+                                        name="radio-buttons-group-1"
+                                    >  
+                                    <ul>
+                                        <li><FormControlLabel value="Chequing" className="blue-checkRadio cicle-icon" control={<Radio />} label="Chequing" /></li>
+                                        <li><FormControlLabel value="Savings" className="blue-checkRadio cicle-icon" control={<Radio />} label="Savings" /></li>
+                                        <li><FormControlLabel value="Children" className="blue-checkRadio cicle-icon" control={<Radio />} label="Children" /></li>
+                                        <li><FormControlLabel value="Student" className="blue-checkRadio cicle-icon" control={<Radio />} label="Student" /></li>
+                                        <li><FormControlLabel value="Senior" className="blue-checkRadio cicle-icon" control={<Radio />} label="Senior" /></li>
+                                        <li><FormControlLabel value="Business" className="blue-checkRadio cicle-icon" control={<Radio />} label="Business" /></li>
+                                    </ul>
+                                </RadioGroup>
+                            </div>
+                            </div>
+                    </Grid>
                 </Grid>
             </Container>
         </section>
@@ -59,7 +100,7 @@ const Result = () => {
         <section className="advertising-disclosure">
             <Container>
                 <Grid container>
-                    <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid item  xs={12} sm={12} md={12} lg={12} >
                         <div className="advertising-disclosure-inner">
                             <p>advertising disclosure</p>
                             <h3>Viewing <span>high interest</span> with a balance of <span>$5,000</span></h3>
@@ -72,7 +113,7 @@ const Result = () => {
         <section className="bank-listing">
             <Container>
                 <Grid container>
-                    <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid item  xs={12} sm={12} md={12} lg={12}  >
                          <div className="banking-listing-inner">
                                <div className="bank-listing-top">
                                     <div className="listing-top-left">
@@ -114,7 +155,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color=""><span></span>read less</Button>
+                                            <Button><span></span>read less</Button>
                                         </div>
                                     </div>
                                     <div className="listing-top-right">
@@ -182,7 +223,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color=""><span></span>read less</Button>
+                                            <Button ><span></span>read less</Button>
                                         </div>
                                     </div>
                                     <div className="listing-top-right">
@@ -250,7 +291,7 @@ const Result = () => {
                                         </div>
                                         {/* Read less button */}
                                         <div className="read-less-btn">
-                                            <Button variant=" " color=""><span></span>read less</Button>
+                                            <Button ><span></span>read less</Button>
                                         </div>
                                     </div>
                                     <div className="listing-top-right">

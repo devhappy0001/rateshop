@@ -18,7 +18,7 @@ const Eligibility = () => {
         <section className="cards-wrap">
             <Container className="mt-200">
                 <Grid container>
-                    <Grid item  xs={12} sm={12} md={12} lg={12} spacing={2}>
+                    <Grid item  xs={12} sm={12} md={12} lg={12}  >
                         <ul className="step-nav d-flex">
                             <li className="filled">
                                 <span>1</span><p>Card type</p>

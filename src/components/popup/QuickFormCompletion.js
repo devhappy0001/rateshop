@@ -2,13 +2,15 @@ import React from 'react'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import { Button, Dialog, IconButton,Typography } from "@material-ui/core/";
+import { Button, Dialog,
+    //  IconButton,Typography
+     } from "@material-ui/core/";
 import { withStyles } from '@material-ui/core/styles';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
+// import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
+// import MuiDialogActions from '@material-ui/core/DialogActions';
 import CloseIcon from '@material-ui/icons/Close';
-import StarRateIcon from '@material-ui/icons/StarRate';
+// import StarRateIcon from '@material-ui/icons/StarRate';
 import StarIcon from '@material-ui/icons/Star';
 import "./popup-common.scss";
 import "./QuickFormCompletion.scss";
@@ -18,45 +20,45 @@ import {
     ElfSight,
   } from "../../core/ImgsesSvg";
 const QuickFormCompletion = () => {
-    const styles = (theme) => ({
-        root: {
-            margin: 0,
-            padding: theme.spacing(2),
-        },
-        closeButton: {
-            position: 'absolute',
-            right: theme.spacing(1),
-            top: theme.spacing(1),
-            color: theme.palette.grey[500],
-        },
-    });
-    const DialogTitle = withStyles(styles)((props) => {
-        const { children, classes, onClose, ...other } = props;
-        return (
-            <div className='modal-header'>
-                <MuiDialogTitle disableTypography className={classes.root} {...other}>
-                    <Typography variant="h6">{children}</Typography>
-                    {onClose ? (
-                    <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-                        <CloseIcon />
-                    </IconButton>
-                    ) : null}
-                </MuiDialogTitle>
-            </div>
-        );
-    });
+    // const styles = (theme) => ({
+    //     root: {
+    //         margin: 0,
+    //         padding: theme.spacing(2),
+    //     },
+    //     closeButton: {
+    //         position: 'absolute',
+    //         right: theme.spacing(1),
+    //         top: theme.spacing(1),
+    //         color: theme.palette.grey[500],
+    //     },
+    // });
+    // const DialogTitle = withStyles(styles)((props) => {
+    //     const { children, classes, onClose, ...other } = props;
+    //     return (
+    //         <div className='modal-header'>
+    //             <MuiDialogTitle disableTypography className={classes.root} {...other}>
+    //                 <Typography variant="h6">{children}</Typography>
+    //                 {onClose ? (
+    //                 <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+    //                     <CloseIcon />
+    //                 </IconButton>
+    //                 ) : null}
+    //             </MuiDialogTitle>
+    //         </div>
+    //     );
+    // });
     const DialogContent = withStyles((theme) => ({
         root: {
           padding: theme.spacing(2),
         },
     }))(MuiDialogContent);
-    const DialogActions = withStyles((theme) => ({
-        root: {
-          margin: 0,
-          padding: theme.spacing(1),
+    // const DialogActions = withStyles((theme) => ({
+    //     root: {
+    //       margin: 0,
+    //       padding: theme.spacing(1),
 
-        },
-    }))(MuiDialogActions);
+    //     },
+    // }))(MuiDialogActions);
 
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {

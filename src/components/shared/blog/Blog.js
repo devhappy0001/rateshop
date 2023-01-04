@@ -32,7 +32,7 @@ const Blog = () => {
                             <div className="blog-outer">
                                 <div className="img-wrap">
                                     <figure>
-                                        <img src={blog1} alt="" />
+                                        <img src={blog1} alt="Image" />
                                     </figure>
                                 </div>
                                 <div className="blog-text">
@@ -47,7 +47,7 @@ const Blog = () => {
                             <div className="blog-outer">
                                 <div className="img-wrap">
                                     <figure>
-                                        <img src={blog2} alt="" />
+                                        <img src={blog2} alt="Image" />
                                     </figure>
                                 </div>
                                 <div className="blog-text">
@@ -62,7 +62,7 @@ const Blog = () => {
                         <div className="blog-outer">
                                 <div className="img-wrap">
                                     <figure>
-                                        <img src={blog3} alt="" />
+                                        <img src={blog3} alt="Image" />
                                     </figure>
                                 </div>
                                 <div className="blog-text">
@@ -75,7 +75,7 @@ const Blog = () => {
                         </Grid>
                         <Grid item sm={12} md={12} lg={12} className="right-blogs">
                             <div className="blog-btn d-flex justify-content-center">
-                                <Button variant="contained" color="">
+                                <Button variant="contained">
                                     View All Blog
                                 </Button>
                             </div>
